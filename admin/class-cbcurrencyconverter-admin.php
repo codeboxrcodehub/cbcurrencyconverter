@@ -563,7 +563,7 @@ class CBCurrencyConverter_Admin {
 		if ( get_transient( 'cbcurrencyconverter_activated_notice' ) ) {
 			$notice_html = '<div style="border-left-color:#fb4e24;" class="notice notice-success is-dismissible">';
 			/* translators: %s : plugin core version */
-			$notice_html .= '<p><img style="float: left; display: inline-block; margin-right: 15px;" alt="icon" src="' . esc_url(plugins_url('assets/images/icon_48.png')) .  '" />' . sprintf( wp_kses(__( 'Thanks for installing/deactivating <strong>CBX Currency Converter</strong> V%s - Codeboxr Team', 'cbcurrencyconverter' ), ['strong' => []]), esc_attr(CBCURRENCYCONVERTER_VERSION) ) . '</p>'; //phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage
+			$notice_html .= '<p><img style="float: left; display: inline-block; margin-right: 15px;" alt="icon" src="' . esc_url(plugins_url('assets/images/icon_48.png', dirname(__FILE__))) .  '" />' . sprintf( wp_kses(__( 'Thanks for installing/deactivating <strong>CBX Currency Converter</strong> V%s - Codeboxr Team', 'cbcurrencyconverter' ), ['strong' => []]), esc_attr(CBCURRENCYCONVERTER_VERSION) ) . '</p>'; //phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage
 			/* translators: 1. Plugin internal url  2. External plugin's author website link */
 			$notice_html .= '<p>' . sprintf( __( 'Check <a style="color: #fb4e24; font-weight: bold;" href="%1$s">Plugin Setting</a> | <a style="color: #fb4e24; font-weight: bold;" href="%2$s" target="_blank">Documentation</a>', 'cbcurrencyconverter' ), esc_url(admin_url( 'options-general.php?page=cbcurrencyconverter' )), 'https://codeboxr.com/product/cbx-currency-converter-for-wordpress/' ) . '</p>';
 			$notice_html .= '</div>';
@@ -581,7 +581,7 @@ class CBCurrencyConverter_Admin {
 		if ( get_transient( 'cbcurrencyconverter_upgraded_notice' ) ) {
 			$notice_html = '<div style="border-left-color:#fb4e24;" class="notice notice-success is-dismissible">';
 			/* translators: %s: plugin core version */
-			$notice_html .= '<p><img style="float: left; display: inline-block; margin-right: 15px;" alt="icon" src="' . esc_url(plugins_url('assets/images/icon_48.png')) . '"/>' . sprintf( wp_kses(__( 'Thanks for upgrading <strong>CBX Currency Converter</strong> V%s , enjoy the new features and bug fixes - Codeboxr Team', 'cbcurrencyconverter' ), ['strong' => []]), esc_attr(CBCURRENCYCONVERTER_VERSION) ) . '</p>'; //phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage
+			$notice_html .= '<p><img style="float: left; display: inline-block; margin-right: 15px;" alt="icon" src="' . esc_url(plugins_url('assets/images/icon_48.png', dirname(__FILE__))) . '"/>' . sprintf( wp_kses(__( 'Thanks for upgrading <strong>CBX Currency Converter</strong> V%s , enjoy the new features and bug fixes - Codeboxr Team', 'cbcurrencyconverter' ), ['strong' => []]), esc_attr(CBCURRENCYCONVERTER_VERSION) ) . '</p>'; //phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage
 			/* translators:1. Plugin internal url 2. Plugin author's website url for this plugin */
 			$notice_html .= '<p>' . sprintf( wp_kses(__( 'Check <a style="color: #fb4e24; font-weight: bold;"  href="%1$s" >Plugin Setting</a> | <a style="color: #fb4e24; font-weight: bold;" href="%2$s" target="_blank">Documentation</a>', 'cbcurrencyconverter' ), ['a' => ['href' => [], 'style' => [], 'target' => [], 'class' => []]]), esc_url(admin_url( 'options-general.php?page=cbcurrencyconverter' )), 'https://codeboxr.com/product/cbx-currency-converter-for-wordpress/' ) . '</p>';
 			$notice_html .= '</div>';

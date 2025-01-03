@@ -108,6 +108,14 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                     <div class="content">
                         <div class="cbx-backend-settings-row">
                             <p>
+                                Version - 3.1.6
+                            </p>
+                            <ul>
+                                <li>[fixed] Update notification note icon url fixed</li>
+                            </ul>
+                        </div>
+                        <div class="cbx-backend-settings-row">
+                            <p>
                                 Version - 3.1.5
                             </p>
                             <ul>
