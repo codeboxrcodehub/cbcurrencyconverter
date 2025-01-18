@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-03 08:02+0000\n"
+"POT-Creation-Date: 2025-01-18 12:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -48,7 +48,7 @@ msgid ""
 "upgrade to %2$s or later.</strong>"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:841
+#: includes/class-cbcurrencyconverter-setting.php:918
 msgid "Add New"
 msgstr ""
 
@@ -97,11 +97,11 @@ msgstr ""
 msgid "Australia Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:995
+#: includes/class-cbcurrencyconverter-setting.php:1050
 msgid "Auto fill from Api Source"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:995
+#: includes/class-cbcurrencyconverter-setting.php:1050
 msgid "Auto Fill via Api"
 msgstr ""
 
@@ -290,7 +290,7 @@ msgstr ""
 msgid "CBX Currency Converter"
 msgstr ""
 
-#: templates/admin/support.php:194
+#: templates/admin/support.php:202
 msgid "CBX Currency Converter Plugin Details"
 msgstr ""
 
@@ -357,7 +357,7 @@ msgid ""
 msgstr ""
 
 #: includes/class-cbcurrencyconverter-helper.php:1338
-#: includes/class-cbcurrencyconverter-setting.php:370
+#: includes/class-cbcurrencyconverter-setting.php:449
 msgid "Check All"
 msgstr ""
 
@@ -385,11 +385,11 @@ msgstr ""
 msgid "China Yuan Renminbi"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:729
+#: includes/class-cbcurrencyconverter-setting.php:806
 msgid "Choose Color"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:699
+#: includes/class-cbcurrencyconverter-setting.php:777
 msgid "Choose File"
 msgstr ""
 
@@ -401,19 +401,23 @@ msgstr ""
 msgid "clear and close"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:921
+#: includes/class-cbcurrencyconverter-setting.php:976
 msgid "Click to copy shortcode"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:254
+#: includes/class-cbcurrencyconverter-setting.php:278
 msgid "Click to show hide"
+msgstr ""
+
+#: includes/class-cbcurrencyconverter-setting.php:60
+msgid "Cloning is forbidden."
 msgstr ""
 
 #. Author of the plugin
 msgid "codeboxr"
 msgstr ""
 
-#: templates/admin/support.php:276
+#: templates/admin/support.php:284
 msgid "Codeboxr News Updates"
 msgstr ""
 
@@ -449,7 +453,7 @@ msgstr ""
 msgid "Convert"
 msgstr ""
 
-#: templates/admin/support.php:222
+#: templates/admin/support.php:230
 msgid "Core Plugin Support"
 msgstr ""
 
@@ -486,7 +490,7 @@ msgstr ""
 msgid "Currency Converter Changelog"
 msgstr ""
 
-#: templates/admin/support.php:143
+#: templates/admin/support.php:151
 msgid "Currency Converter Pro Addon Changelog"
 msgstr ""
 
@@ -522,7 +526,7 @@ msgid "Currencylayer.com Free Plan(only base USD)"
 msgstr ""
 
 #. %s: curency name
-#: includes/class-cbcurrencyconverter-setting.php:985
+#: includes/class-cbcurrencyconverter-setting.php:1040
 #, php-format
 msgid "Custom rates based on %s"
 msgstr ""
@@ -596,7 +600,7 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
-#: templates/admin/support.php:204
+#: templates/admin/support.php:212
 msgid "Documentation & User Guide"
 msgstr ""
 
@@ -723,7 +727,7 @@ msgstr ""
 msgid "Guyana Dollar"
 msgstr ""
 
-#: templates/admin/support.php:183
+#: templates/admin/support.php:191
 msgid "Help & Supports"
 msgstr ""
 
@@ -991,7 +995,7 @@ msgstr ""
 msgid "Option Name"
 msgstr ""
 
-#: templates/admin/support.php:239
+#: templates/admin/support.php:247
 msgid "Other WordPress Plugins"
 msgstr ""
 
@@ -1019,7 +1023,7 @@ msgstr ""
 msgid "Philippines Peso"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:952
+#: includes/class-cbcurrencyconverter-setting.php:1007
 msgid "Please choose at least one currency from above field."
 msgstr ""
 
@@ -1057,8 +1061,7 @@ msgstr ""
 #: admin/class-cbcurrencyconverter-admin.php:183
 #: admin/class-cbcurrencyconverter-admin.php:205
 #: admin/class-cbcurrencyconverter-admin.php:274
-#: includes/class-cbcurrencyconverter-setting.php:518
-#: includes/class-cbcurrencyconverter-setting.php:579
+#: includes/class-cbcurrencyconverter-setting.php:658
 #: public/class-cbcurrencyconverter-public.php:135
 msgid "Please Select"
 msgstr ""
@@ -1068,11 +1071,11 @@ msgstr ""
 msgid "Please wait, processing."
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:1032
+#: includes/class-cbcurrencyconverter-setting.php:1087
 msgid "Plugin Woocommerce is installed and activated"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:1027
+#: includes/class-cbcurrencyconverter-setting.php:1082
 msgid "Plugin Woocommerce is not installed or activated"
 msgstr ""
 
@@ -1080,7 +1083,7 @@ msgstr ""
 msgid "Poland Zloty"
 msgstr ""
 
-#: templates/admin/support.php:232
+#: templates/admin/support.php:240
 msgid "Pro Addon Support"
 msgstr ""
 
@@ -1124,7 +1127,7 @@ msgstr ""
 msgid "Reset option values created by this plugin"
 msgstr ""
 
-#: templates/admin/support.php:212
+#: templates/admin/support.php:220
 msgid "Review & Rate CBX Currency Converter Plugin"
 msgstr ""
 
@@ -1152,7 +1155,7 @@ msgstr ""
 msgid "save and close"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:1256
+#: includes/class-cbcurrencyconverter-setting.php:1311
 #: templates/admin/settings.php:47
 msgid "Save Settings"
 msgstr ""
@@ -1393,7 +1396,7 @@ msgstr ""
 msgid "To Enabled Currencies"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:1228
+#: includes/class-cbcurrencyconverter-setting.php:1283
 msgid "Toggle All Sections"
 msgstr ""
 
@@ -1435,7 +1438,7 @@ msgid "Ukraine Hryvna"
 msgstr ""
 
 #: includes/class-cbcurrencyconverter-helper.php:1338
-#: includes/class-cbcurrencyconverter-setting.php:370
+#: includes/class-cbcurrencyconverter-setting.php:449
 msgid "Uncheck All"
 msgstr ""
 
@@ -1449,6 +1452,10 @@ msgstr ""
 
 #: includes/class-cbcurrencyconverter-helper.php:337
 msgid "United States Dollar"
+msgstr ""
+
+#: includes/class-cbcurrencyconverter-setting.php:69
+msgid "Unserializing instances of this class is forbidden."
 msgstr ""
 
 #: admin/class-cbcurrencyconverter-admin.php:206

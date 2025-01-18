@@ -179,7 +179,7 @@ if ( ! function_exists( 'cbcurrencyconverter_load_svg' ) ) {
 	 * @return string|false The SVG content if found, or false on failure.
 	 * @since 1.0.0
 	 */
-	function cbcurrencyconverter_load_svg( $svg_name = '' ) {
+	function cbcurrencyconverter_load_svg( $svg_name = '', $folder = '' ) {
 		//note: code partially generated using chatgpt
 		if ( $svg_name == '' ) {
 			return '';
@@ -201,8 +201,12 @@ if ( ! function_exists( 'cbcurrencyconverter_load_svg' ) ) {
 		// Sanitize the file name to prevent directory traversal attacks.
 		$svg_name = sanitize_file_name( $svg_name );
 
+		if($folder != ''){
+			$folder = trailingslashit($folder);
+		}
+
 		// Construct the full file path.
-		$file_path = $directory . $svg_name . '.svg';
+		$file_path = $directory. $folder . $svg_name . '.svg';
 		$file_path = apply_filters('cbcurrencyconverter_svg_file_path', $file_path, $svg_name);
 
 		// Check if the file exists.

@@ -108,6 +108,14 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                     <div class="content">
                         <div class="cbx-backend-settings-row">
                             <p>
+                                Version - 3.1.7
+                            </p>
+                            <ul>
+                                <li>[fixed] Fixed miss spelled function name</li>
+                            </ul>
+                        </div>
+                        <div class="cbx-backend-settings-row">
+                            <p>
                                 Version - 3.1.6
                             </p>
                             <ul>
@@ -133,14 +141,6 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                                 <li>[improvement] Style improvement</li>
                                 <li>[updated] WordPress Core 6.6.1 compatible</li>
                                 <li>[updated] Pro addon V1.7.6 released</li>
-                            </ul>
-                        </div>
-                        <div class="cbx-backend-settings-row">
-                            <p>
-                                Version - 3.1.3
-                            </p>
-                            <ul>
-                                <li>[improvement] Security improvement</li>
                             </ul>
                         </div>
                     </div>

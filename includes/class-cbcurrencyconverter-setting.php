@@ -38,9 +38,40 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 		 */
 		private static $_instance;
 
+		/**
+		 * Returns class's instance
+		 *
+		 * @return object|self
+		 */
+		public static function instance() {
+			if ( is_null( self::$_instance ) ) {
+				self::$_instance = new self();
+			}
+
+			return self::$_instance;
+		}//end method instance
+
+		/**
+		 * Cloning is forbidden.
+		 *
+		 * @since 2.1
+		 */
+		public function __clone() {
+			wc_doing_it_wrong( __FUNCTION__, esc_html__( 'Cloning is forbidden.', 'cbcurrencyconverter' ), '2.1' );
+		}//end method clone
+
+		/**
+		 * Unserializing instances of this class is forbidden.
+		 *
+		 * @since 2.1
+		 */
+		public function __wakeup() {
+			wc_doing_it_wrong( __FUNCTION__, esc_html__( 'Unserializing instances of this class is forbidden.', 'cbcurrencyconverter' ), '2.1' );
+		}//end method wakeup
+
 		public function __construct() {
 
-		}
+		}//end constructor
 
 
 		/**
@@ -154,10 +185,12 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 						'sanitize_callback' => isset( $option['sanitize_callback'] ) ? $option['sanitize_callback'] : '',
 						'placeholder'       => isset( $option['placeholder'] ) ? $option['placeholder'] : '',
 						'multi'             => isset( $option['multi'] ) ? intval( $option['multi'] ) : 0,
+						'fields'            => isset( $option['fields'] ) ? $option['fields'] : [],
 						'type'              => $type,
 						'optgroup'          => isset( $option['optgroup'] ) ? intval( $option['optgroup'] ) : 0,
 						'sortable'          => isset( $option['sortable'] ) ? intval( $option['sortable'] ) : 0,
 						'allow_new'         => isset( $option['allow_new'] ) ? intval( $option['allow_new'] ) : 0,
+						'allow_clear'       => isset( $option['allow_clear'] ) ? intval( $option['allow_clear'] ) : 0,//for select2
 						'inline'            => isset( $option['inline'] ) ? absint( $option['inline'] ) : 1,
 					];
 
@@ -204,7 +237,6 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 				if ( ! isset( $section_value[ $field['name'] ] ) ) {
 					$section_value[ $field['name'] ] = isset( $field['default'] ) ? $field['default'] : '';
 				}
-
 			}
 
 			return $section_value;
@@ -215,12 +247,15 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 		 *
 		 *
 		 * @param  array  $args
+		 * @param  string  $element_class
 		 *
 		 * @return string
 		 */
-		public function get_field_description( $args ) {
+		public function get_field_description( $args, $element_class = '' ) {
 			if ( ! empty( $args['desc'] ) ) {
-				$desc = sprintf( '<div class="description">%s</div>', $args['desc'] );
+				$field_id         = $args['id'];
+				$desc_extra_class = ( $element_class != '' ) ? ' description_' . $element_class : '';
+				$desc             = sprintf( '<div class="description description_' . esc_attr( $field_id ) . $desc_extra_class . '">%s</div>', $args['desc'] );
 			} else {
 				$desc = '';
 			}
@@ -228,22 +263,11 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 			return $desc;
 		}//end method get_field_description
 
-		/**
-		 * Displays a textarea for a settings field
-		 *
-		 * @param  array  $args
-		 * @param $value
-		 *
-		 * @return void
-		 */
-		function callback_html( $args, $value = null ) {
-			echo $this->get_field_description( $args );// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		}//end method callback_html
 
 		/**
 		 * Displays heading field using h3
 		 *
-		 * @param array $args
+		 * @param  array  $args
 		 *
 		 * @return string
 		 */
@@ -269,8 +293,63 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 			$html = '<h4 class="setting_subheading">' . $args['name'] . '</h4>';
 			$html .= $this->get_field_description( $args );
 
-			echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo $html; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}//end method callback_subheading
+
+		/**
+		 * Displays a textarea for a settings field
+		 *
+		 * @param  array  $args
+		 * @param $value
+		 *
+		 * @return void
+		 */
+		function callback_html( $args, $value = null ) {
+			echo $this->get_field_description( $args );// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}//end method callback_html
+
+		/**
+		 * Displays a text field for a settings field
+		 *
+		 * @param  array  $args
+		 * @param $value
+		 *
+		 * @return void
+		 */
+		function callback_text( $args, $value = null ) {
+			if ( $value === null ) {
+				$value = esc_attr( $this->get_option( $args['id'], $args['section'], $args['default'] ) );
+			}
+			$size = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : 'regular';
+			$type = isset( $args['type'] ) ? $args['type'] : 'text';
+
+			$html_id = "{$args['section']}_{$args['id']}";
+			$html_id = $this->settings_clean_label_for( $html_id );
+
+			$html = sprintf( '<input autocomplete="none" onfocus="this.removeAttribute(\'readonly\');" readonly type="%1$s" class="%2$s-text" id="%6$s" name="%3$s[%4$s]" value="%5$s"/>', $type, $size, $args['section'], $args['id'], $value, $html_id );
+			$html .= $this->get_field_description( $args );
+
+			echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}//end callback_text
+
+		/**
+		 * Displays a email field for a settings field
+		 *
+		 * @param array $args settings field args
+		 */
+		function callback_email( $args ) {
+			$value = esc_attr( $this->get_option( $args['id'], $args['section'], $args['default'] ) );
+			$size  = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : 'regular';
+			$type  = isset( $args['type'] ) ? $args['type'] : 'text';
+
+			$html_id = "{$args['section']}_{$args['id']}";
+			$html_id = $this->settings_clean_label_for( $html_id );
+
+			$html = sprintf( '<input  autocomplete="none" onfocus="this.removeAttribute(\'readonly\');" readonly type="%1$s" class="%2$s-text" id="%6$s" name="%3$s[%4$s]" value="%5$s"/>', $type, $size, $args['section'], $args['id'], $value, $html_id );
+			$html .= $this->get_field_description( $args );
+
+			echo $html; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}//end method callback_email
 
 		/**
 		 * Displays an url field for a settings field
@@ -308,7 +387,7 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 			$html = sprintf( '<input type="%1$s" class="%2$s-number" id="%10$s" name="%3$s[%4$s]" value="%5$s"%6$s%7$s%8$s%9$s/>', $type, $size, $args['section'], $args['id'], $value, $placeholder, $min, $max, $step, $html_id );
 			$html .= $this->get_field_description( $args );
 
-			echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo $html; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}//end method callback_number
 
 		/**
@@ -502,7 +581,7 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 
 			$multi      = isset( $args['multi'] ) ? intval( $args['multi'] ) : 0;
 			$multi_name = ( $multi ) ? '[]' : '';
-			$multi_attr = ( $multi ) ? 'multiple' : '';
+			$multi_attr = ( $multi ) ? ' multiple ' : '';
 
 			if ( $multi && ! is_array( $value ) ) {
 				$value = [];
@@ -515,7 +594,7 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 			$size = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : 'regular selecttwo-select';
 
 			if ( $args['placeholder'] == '' ) {
-				$args['placeholder'] = esc_html__( 'Please Select', 'cbcurrencyconverter' );
+				$args['placeholder'] = esc_html__( 'Please Select', 'cbxwpbookmark' );
 			}
 
 			$html_id = "{$args['section']}_{$args['id']}";
@@ -526,12 +605,12 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 
 			if ( isset( $args['optgroup'] ) && $args['optgroup'] ) {
 				foreach ( $args['options'] as $opt_grouplabel => $option_vals ) {
-					$html .= '<optgroup label="' . $opt_grouplabel . '">';
+					$html .= '<optgroup label="' . esc_attr($opt_grouplabel) . '">';
 
 					if ( ! is_array( $option_vals ) ) {
 						$option_vals = [];
 					} else {
-						$option_vals = $option_vals;
+						//$option_vals = $option_vals;
 					}
 
 					foreach ( $option_vals as $key => $val ) {
@@ -556,7 +635,7 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 			$html .= '</select></div>';
 			$html .= $this->get_field_description( $args );
 
-			echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo $html; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}//end method callback_select
 
 		/**
@@ -593,7 +672,7 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 					if ( ! is_array( $option_vals ) ) {
 						$option_vals = [];
 					} else {
-						$option_vals = $option_vals;
+						//$option_vals = $option_vals;
 					}
 
 
@@ -601,7 +680,7 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 						$selected = in_array( $key, $value ) ? ' selected="selected" ' : '';
 						$html     .= sprintf( '<option value="%s" ' . $selected . '>%s</option>', $key, $val );
 					}
-					$html .= '<optgroup>';
+					$html .= '</optgroup>';
 				}
 			} else {
 
@@ -685,7 +764,6 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 		 * @param  array  $args  settings field args
 		 */
 		function callback_file( $args ) {
-
 			$value = esc_attr( $this->get_option( $args['id'], $args['section'], $args['default'] ) );
 			$size  = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : 'regular';
 
@@ -705,7 +783,7 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 			$html .= $this->get_field_description( $args );
 
 			echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		}
+		}//end method callback_file
 
 		/**
 		 * Displays a color picker field for a settings field
@@ -716,7 +794,6 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 		 * @return void
 		 */
 		function callback_color( $args, $value = null ) {
-
 			if ( $value === null ) {
 				$value = esc_attr( $this->get_option( $args['id'], $args['section'], $args['default'] ) );
 			}
@@ -869,29 +946,7 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 			echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}//end method callback_password
 
-		/**
-		 * Displays a text field for a settings field
-		 *
-		 * @param  array  $args
-		 * @param $value
-		 *
-		 * @return void
-		 */
-		function callback_text( $args, $value = null ) {
-			if ( $value === null ) {
-				$value = esc_attr( $this->get_option( $args['id'], $args['section'], $args['default'] ) );
-			}
-			$size = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : 'regular';
-			$type = isset( $args['type'] ) ? $args['type'] : 'text';
 
-			$html_id = "{$args['section']}_{$args['id']}";
-			$html_id = $this->settings_clean_label_for( $html_id );
-
-			$html = sprintf( '<input autocomplete="none" onfocus="this.removeAttribute(\'readonly\');" readonly type="%1$s" class="%2$s-text" id="%6$s" name="%3$s[%4$s]" value="%5$s"/>', $type, $size, $args['section'], $args['id'], $value, $html_id );
-			$html .= $this->get_field_description( $args );
-
-			echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		}//end callback_text
 
 		/**
 		 * Displays a textarea for a settings field
