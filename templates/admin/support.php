@@ -111,6 +111,14 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                     <div class="content">
                         <div class="cbx-backend-settings-row">
                             <p>
+                                Version - 3.1.9
+                            </p>
+                            <ul>
+                                <li>[fixed] Elementor widget bug fix from previous release V3.1.8</li>
+                            </ul>
+                        </div>
+                        <div class="cbx-backend-settings-row">
+                            <p>
                                 Version - 3.1.8
                             </p>
                             <ul>
@@ -124,14 +132,6 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                             </p>
                             <ul>
                                 <li>[fixed] Fixed miss spelled function name</li>
-                            </ul>
-                        </div>
-                        <div class="cbx-backend-settings-row">
-                            <p>
-                                Version - 3.1.6
-                            </p>
-                            <ul>
-                                <li>[fixed] Update notification note icon url fixed</li>
                             </ul>
                         </div>
                     </div>

@@ -73,7 +73,7 @@ class CBCurrencyConverterElemWidget extends \Elementor\Widget_Base {
 	 * @access protected
 	 */
 	protected function register_controls() {
-		$default_values = \cbcurrencyconverter\includes\Helpers\CBCurrencyConverterHelper::global_default_values();
+		$default_values = CBCurrencyConverterHelper::global_default_values();
 
 		//take care(comma sep string to array) array related properties
 		if ( isset( $default_values['calc_from_currencies'] ) && is_string( $default_values['calc_from_currencies'] ) ) {
@@ -91,7 +91,7 @@ class CBCurrencyConverterElemWidget extends \Elementor\Widget_Base {
 		extract( $default_values, EXTR_SKIP );
 
 
-		$all_currencies = \cbcurrencyconverter\includes\Helpers\CBCurrencyConverterHelper::getCurrencyList();
+		$all_currencies = CBCurrencyConverterHelper::getCurrencyList();
 
 
 		$this->start_controls_section(
@@ -109,7 +109,7 @@ class CBCurrencyConverterElemWidget extends \Elementor\Widget_Base {
 				'type'        => \Elementor\Controls_Manager::SELECT2,
 				'placeholder' => esc_html__( 'Select layout', 'cbcurrencyconverter' ),
 				'default'     => $layout,
-				'options'     => \cbcurrencyconverter\includes\Helpers\CBCurrencyConverterHelper::get_layouts(),
+				'options'     => CBCurrencyConverterHelper::get_layouts(),
 				'label_block' => true,
 			]
 		);
@@ -291,7 +291,7 @@ class CBCurrencyConverterElemWidget extends \Elementor\Widget_Base {
 	 * @access protected
 	 */
 	protected function render() {
-		$default_values = \cbcurrencyconverter\includes\Helpers\CBCurrencyConverterHelper::global_default_values();
+		$default_values = CBCurrencyConverterHelper::global_default_values();
 
 		//take care(comma sep string to array) array related properties
 		if ( isset( $default_values['calc_from_currencies'] ) && is_string( $default_values['calc_from_currencies'] ) ) {
@@ -370,16 +370,16 @@ class CBCurrencyConverterElemWidget extends \Elementor\Widget_Base {
 
 		if ( $layout == 'list' ) {
 			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			echo \cbcurrencyconverter\includes\Helpers\CBCurrencyConverterHelper::cbxcclistview( 'widget', $atts );
+			echo CBCurrencyConverterHelper::cbxcclistview( 'widget', $atts );
 		} elseif ( $layout == 'cal' ) {
 			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			echo \cbcurrencyconverter\includes\Helpers\CBCurrencyConverterHelper::cbxcccalcview( 'widget', $atts );
+			echo CBCurrencyConverterHelper::cbxcccalcview( 'widget', $atts );
 		} elseif ( $layout == 'calwithlistbottom' ) {
 			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			echo \cbcurrencyconverter\includes\Helpers\CBCurrencyConverterHelper::cbxcccalcview( 'widget', $atts ) . \cbcurrencyconverter\includes\Helpers\CBCurrencyConverterHelper::cbxcclistview( 'widget', $atts );
+			echo CBCurrencyConverterHelper::cbxcccalcview( 'widget', $atts ) . CBCurrencyConverterHelper::cbxcclistview( 'widget', $atts );
 		} elseif ( $layout == 'calwithlisttop' ) {
 			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			echo \cbcurrencyconverter\includes\Helpers\CBCurrencyConverterHelper::cbxcclistview( 'widget', $atts ) . \cbcurrencyconverter\includes\Helpers\CBCurrencyConverterHelper::cbxcccalcview( 'widget', $atts );
+			echo CBCurrencyConverterHelper::cbxcclistview( 'widget', $atts ) . CBCurrencyConverterHelper::cbxcccalcview( 'widget', $atts );
 		}
 	}//end render
 
