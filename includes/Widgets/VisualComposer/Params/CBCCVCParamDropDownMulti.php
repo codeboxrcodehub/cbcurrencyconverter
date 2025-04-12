@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class CBCC_VCParam_DropDownMulti {
+class CBCCVCParamDropDownMulti {
 	/**
 	 * Initiator.
 	 */
@@ -101,6 +101,6 @@ class CBCC_VCParam_DropDownMulti {
 		return $output;
 	}
 
-}//end class CBCC_VCParam_DropDownMulti
+}//end class CBCCVCParamDropDownMulti
 
-new CBCC_VCParam_DropDownMulti();
+new CBCCVCParamDropDownMulti();

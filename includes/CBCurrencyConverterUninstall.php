@@ -25,7 +25,7 @@ if ( ! defined( 'WPINC' ) ) {
  * @subpackage CBCurrencyConverter/includes
  * @author     codeboxr <info@codeboxr.com>
  */
-class CBCurrencyConverter_Uninstall {
+class CBCurrencyConverterUninstall {
 	/**
 	 * Uninstall plugin functionality
 	 *
@@ -77,7 +77,6 @@ class CBCurrencyConverter_Uninstall {
 			do_action('cbcurrencyconverter_plugin_options_deleted_before');
 
 			foreach ( $option_values as $option_value ) {
-				//delete_option( $option_value['option_name'] );
 				$option = $option_value['option_name'];
 
 				do_action('cbcurrencyconverter_plugin_option_delete_before', $option);
@@ -106,5 +105,4 @@ class CBCurrencyConverter_Uninstall {
 			do_action( 'cbcurrencyconverter_plugin_uninstall' );
 		}
 	}//end uninstall
-
-}//end class CBCurrencyConverter_Uninstall
+}//end class CBCurrencyConverterUninstall

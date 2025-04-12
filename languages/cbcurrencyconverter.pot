@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-18 12:38+0000\n"
+"POT-Creation-Date: 2025-04-12 05:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -15,20 +15,20 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/"
 
 #. %s template
-#: includes/cbcurrencyconverter-tpl-loader.php:74
+#: includes/Functions/cbcurrencyconverter-tpl-loader.php:74
 #, php-format
 msgid "%s does not exist."
 msgstr ""
 
 #. %s: plugin pro addon external url
-#: admin/class-cbcurrencyconverter-admin.php:612
+#: includes/CBCurrencyConverterAdmin.php:571
 #, php-format
 msgid ""
 "<a target=\"_blank\" href=\"%s\">CBX Currency Converter Pro Addon</a> has "
 "extended features, settings, widgets and shortcodes. try it  - Codeboxr Team"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:530
+#: includes/CBCurrencyConverterAdmin.php:484
 msgid ""
 "<strong>CBX Currency Converter Pro Addon</strong> has been deactivated as "
 "it's not compatible with core plugin <strong>CBX Currency Converter</strong> "
@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 
 #. translators:translators: %s: plugin setting url for licence
-#: admin/class-cbcurrencyconverter-admin.php:509
+#: includes/CBCurrencyConverterAdmin.php:462
 #, php-format
 msgid ""
 "<strong>Note:</strong> CBX Currency Converter Pro Addon is custom plugin. "
@@ -48,23 +48,23 @@ msgid ""
 "upgrade to %2$s or later.</strong>"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:918
+#: includes/CBCurrencyconverterSetting.php:916
 msgid "Add New"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:227
+#: includes/Helpers/CBCurrencyConverterHelper.php:226
 msgid "Afghanistan Afghani"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:226
+#: includes/Helpers/CBCurrencyConverterHelper.php:225
 msgid "Albania Lek"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1152
+#: includes/Helpers/CBCurrencyConverterHelper.php:1161
 msgid "Alphavantage Api Key(Paid)"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:27
+#: includes/Helpers/CBCurrencyConverterHelper.php:26
 msgid "Alphavantage.co (Premimum Plan) "
 msgstr ""
 
@@ -72,274 +72,274 @@ msgstr ""
 msgid "Amount"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1137
+#: includes/Helpers/CBCurrencyConverterHelper.php:1146
 msgid "Api Source"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1307
+#: includes/Helpers/CBCurrencyConverterHelper.php:1316
 msgid ""
 "Are you sure to reset currency rate cache, this process can not be undone?"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:228
+#: includes/Helpers/CBCurrencyConverterHelper.php:227
 msgid "Argentina Peso"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:229
+#: includes/Helpers/CBCurrencyConverterHelper.php:228
 msgid "Aruba Guilder"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:242
+#: includes/CBCurrencyConverterAdmin.php:242
 msgid "Attention"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:230
+#: includes/Helpers/CBCurrencyConverterHelper.php:229
 msgid "Australia Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:1050
+#: includes/CBCurrencyconverterSetting.php:1048
 msgid "Auto fill from Api Source"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:1050
+#: includes/CBCurrencyconverterSetting.php:1048
 msgid "Auto Fill via Api"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:231
+#: includes/Helpers/CBCurrencyConverterHelper.php:230
 msgid "Azerbaijan New Manat"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:232
+#: includes/Helpers/CBCurrencyConverterHelper.php:231
 msgid "Bahamas Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:243
+#: includes/Helpers/CBCurrencyConverterHelper.php:242
 msgid "Bahrain Dinar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:234
+#: includes/Helpers/CBCurrencyConverterHelper.php:233
 msgid "Bangladeshi Taka"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:233
+#: includes/Helpers/CBCurrencyConverterHelper.php:232
 msgid "Barbados Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:235
+#: includes/Helpers/CBCurrencyConverterHelper.php:234
 msgid "Belarus Ruble"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:236
+#: includes/Helpers/CBCurrencyConverterHelper.php:235
 msgid "Belize Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:237
+#: includes/Helpers/CBCurrencyConverterHelper.php:236
 msgid "Bermuda Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:238
+#: includes/Helpers/CBCurrencyConverterHelper.php:237
 msgid "Bolivia Boliviano"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:239
+#: includes/Helpers/CBCurrencyConverterHelper.php:238
 msgid "Bosnia and Herzegovina BAM"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:240
+#: includes/Helpers/CBCurrencyConverterHelper.php:239
 msgid "Botswana Pula"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:242
+#: includes/Helpers/CBCurrencyConverterHelper.php:241
 msgid "Brazil Real"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:244
+#: includes/Helpers/CBCurrencyConverterHelper.php:243
 msgid "Brunei Darussalam Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:241
+#: includes/Helpers/CBCurrencyConverterHelper.php:240
 msgid "Bulgaria Lev"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:72
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:257
+#: includes/Helpers/CBCurrencyConverterHelper.php:71
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:255
 msgid "Calc with List Bottom"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:73
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:258
+#: includes/Helpers/CBCurrencyConverterHelper.php:72
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:256
 msgid "Calc with List Top"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:70
-#: includes/class-cbcurrencyconverter-helper.php:1085
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:255
+#: includes/Helpers/CBCurrencyConverterHelper.php:69
+#: includes/Helpers/CBCurrencyConverterHelper.php:1088
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:253
 msgid "Calculator"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:998
+#: includes/Helpers/CBCurrencyConverterHelper.php:1001
 msgid "Calculator Default"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1185
+#: includes/Helpers/CBCurrencyConverterHelper.php:1194
 msgid "Calculator Default Settings"
 msgstr ""
 
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:291
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:289
 msgid "Calculator Enabled From Currencies"
 msgstr ""
 
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:325
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:323
 msgid "Calculator Enabled To Currencies"
 msgstr ""
 
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:210
-#: widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php:161
+#: includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php:161
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:180
 msgid "Calculator From Currency"
 msgstr ""
 
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:307
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:305
 msgid "Calculator From Default Currency"
 msgstr ""
 
-#: widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php:159
+#: includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php:159
 msgid "Calculator From Enabled Currencies"
 msgstr ""
 
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:167
-#: widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php:158
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:52
+#: includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php:158
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:137
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:52
 msgid "Calculator Header"
 msgstr ""
 
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:274
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:272
 msgid "Calculator Header:"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1191
+#: includes/Helpers/CBCurrencyConverterHelper.php:1200
 msgid "Calculator Heading"
 msgstr ""
 
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:55
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:64
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:74
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:84
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:94
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:105
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:55
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:64
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:74
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:84
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:94
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:105
 msgid "Calculator Settings"
 msgstr ""
 
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:271
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:160
-#: widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php:157
+#: includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php:157
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:269
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:130
 msgid "Calculator settings"
 msgstr ""
 
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:246
-#: widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php:164
+#: includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php:164
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:216
 msgid "Calculator To Currency"
 msgstr ""
 
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:342
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:340
 msgid "Calculator To Default Currency"
 msgstr ""
 
-#: widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php:162
+#: includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php:162
 msgid "Calculator To Enabled Currencies"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1087
+#: includes/Helpers/CBCurrencyConverterHelper.php:1090
 msgid "Calculator with List at bottom"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1088
+#: includes/Helpers/CBCurrencyConverterHelper.php:1091
 msgid "Calculator with List at top"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:245
+#: includes/Helpers/CBCurrencyConverterHelper.php:244
 msgid "Cambodia Riel"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:246
+#: includes/Helpers/CBCurrencyConverterHelper.php:245
 msgid "Canada Dollar"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:226
-#: admin/class-cbcurrencyconverter-admin.php:247
+#: includes/CBCurrencyConverterAdmin.php:226
+#: includes/CBCurrencyConverterAdmin.php:247
 msgid "Cancel"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:231
+#: includes/CBCurrencyConverterAdmin.php:231
 msgid "cancel and close"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:247
+#: includes/Helpers/CBCurrencyConverterHelper.php:246
 msgid "Cayman Islands Dollar"
 msgstr ""
 
-#: widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php:367
+#: includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php:367
 msgid "CBX Blocks"
 msgstr ""
 
 #. Name of the plugin
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:37
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:68
-#: widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php:145
-#: widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php:151
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:25
+#: includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php:145
+#: includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php:151
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:35
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:38
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:25
 msgid "CBX Currency Converter"
 msgstr ""
 
-#: templates/admin/support.php:202
+#: templates/admin/support.php:194
 msgid "CBX Currency Converter Plugin Details"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-activator.php:46
-msgid "CBX Currency Converter plugin requires PHP 7.4 or higher!"
+#: includes/CBCurrencyConverterActivator.php:49
+msgid "CBX Currency Converter plugin requires PHP %$1s or higher!"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-activator.php:41
-msgid "CBX Currency Converter plugin requires WordPress 3.5 or higher!"
+#: includes/CBCurrencyConverterActivator.php:44
+msgid "CBX Currency Converter plugin requires WordPress %$1s or higher!"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:553
+#: includes/CBCurrencyConverterAdmin.php:509
 msgid "CBX Currency Converter plugin setting has been reset to defaults"
 msgstr ""
 
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:130
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:100
 msgid "CBX Currency Converter Setting"
 msgstr ""
 
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:26
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:26
 msgid "CBX Currency Converter Widget"
 msgstr ""
 
-#: templates/admin/support.php:30
+#: templates/admin/support.php:31
 msgid "CBX Currency Converter: Support & Docs"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:713
+#: includes/CBCurrencyConverterAdmin.php:673
 msgid "CBX Currency plugin api rate cache reset successfully"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:663
+#: includes/CBCurrencyConverterAdmin.php:623
 msgid "CBX Currency plugin setting reset scheduled successfully"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:637
+#: includes/CBCurrencyConverterAdmin.php:597
 msgid "CBX Currency reset setting html loaded successfully"
 msgstr ""
 
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:29
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:29
 msgid "CBX Widgets"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:346
+#: includes/Helpers/CBCurrencyConverterHelper.php:345
 msgid "Central African CFA franc"
 msgstr ""
 
 #. translators:1. Plugin internal url 2. Plugin author's website url for this plugin
-#: admin/class-cbcurrencyconverter-admin.php:586
+#: includes/CBCurrencyConverterAdmin.php:544
 #, php-format
 msgid ""
 "Check <a style=\"color: #fb4e24; font-weight: bold;\"  href=\"%1$s\" >Plugin "
@@ -348,7 +348,7 @@ msgid ""
 msgstr ""
 
 #. 1. Plugin internal url  2. External plugin's author website link
-#: admin/class-cbcurrencyconverter-admin.php:568
+#: includes/CBCurrencyConverterAdmin.php:525
 #, php-format
 msgid ""
 "Check <a style=\"color: #fb4e24; font-weight: bold;\" href=\"%1$s\">Plugin "
@@ -356,13 +356,13 @@ msgid ""
 "target=\"_blank\">Documentation</a>"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1338
-#: includes/class-cbcurrencyconverter-setting.php:449
+#: includes/CBCurrencyconverterSetting.php:447
+#: includes/Helpers/CBCurrencyConverterHelper.php:1347
 msgid "Check All"
 msgstr ""
 
 #. 1. Plugin setting url 2. Documentation link
-#: admin/class-cbcurrencyconverter-admin.php:621
+#: includes/CBCurrencyConverterAdmin.php:580
 #, php-format
 msgid ""
 "Check how to <a style=\"color:#9c27b0 !important; font-weight: bold;\" "
@@ -371,45 +371,46 @@ msgid ""
 "<strong>My Account</strong></a> section of Codeboxr.com"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1291
+#: includes/Helpers/CBCurrencyConverterHelper.php:1300
 msgid ""
 "Check this box if you would like <strong>CBX Currency Converter</strong> to "
 "completely remove all of its data when the plugin is deleted."
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:248
+#: includes/Helpers/CBCurrencyConverterHelper.php:247
 msgid "Chile Peso"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:249
+#: includes/Helpers/CBCurrencyConverterHelper.php:248
 msgid "China Yuan Renminbi"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:806
+#: includes/CBCurrencyconverterSetting.php:804
 msgid "Choose Color"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:777
+#: includes/CBCurrencyconverterSetting.php:775
 msgid "Choose File"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:227
+#: includes/CBCurrencyConverterAdmin.php:227
 msgid "Clear"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:232
+#: includes/CBCurrencyConverterAdmin.php:232
 msgid "clear and close"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:976
+#: includes/CBCurrencyconverterSetting.php:974
 msgid "Click to copy shortcode"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:278
+#: includes/CBCurrencyconverterSetting.php:276
 msgid "Click to show hide"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:60
+#: includes/CBCurrencyConverter.php:107
+#: includes/CBCurrencyconverterSetting.php:58
 msgid "Cloning is forbidden."
 msgstr ""
 
@@ -417,35 +418,35 @@ msgstr ""
 msgid "codeboxr"
 msgstr ""
 
-#: templates/admin/support.php:284
+#: templates/admin/support.php:279
 msgid "Codeboxr News Updates"
 msgstr ""
 
-#: public/class-cbcurrencyconverter-public.php:389
+#: includes/CBCurrencyConverterPublic.php:388
 msgid "Codeboxr Widgets"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:250
+#: includes/Helpers/CBCurrencyConverterHelper.php:249
 msgid "Colombia Peso"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:233
+#: includes/CBCurrencyConverterAdmin.php:233
 msgid "color input field"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:221
+#: includes/CBCurrencyConverterAdmin.php:221
 msgid "color picker dialog"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:234
+#: includes/CBCurrencyConverterAdmin.php:234
 msgid "color selection area"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:223
+#: includes/CBCurrencyConverterAdmin.php:223
 msgid "color swatch"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:245
+#: includes/CBCurrencyConverterAdmin.php:245
 msgid "Confirmation"
 msgstr ""
 
@@ -453,32 +454,32 @@ msgstr ""
 msgid "Convert"
 msgstr ""
 
-#: templates/admin/support.php:230
+#: templates/admin/support.php:225
 msgid "Core Plugin Support"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:251
+#: includes/Helpers/CBCurrencyConverterHelper.php:250
 msgid "Costa Rica Colon"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:252
+#: includes/Helpers/CBCurrencyConverterHelper.php:251
 msgid "Croatia Kuna"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:253
+#: includes/Helpers/CBCurrencyConverterHelper.php:252
 msgid "Cuba Peso"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:746
-#: includes/class-cbcurrencyconverter-helper.php:1194
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:209
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:54
+#: includes/Helpers/CBCurrencyConverterHelper.php:745
+#: includes/Helpers/CBCurrencyConverterHelper.php:1203
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:207
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:54
 msgid "Currency Calculator"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:294
-#: admin/class-cbcurrencyconverter-admin.php:295
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:40
+#: includes/CBCurrencyConverterAdmin.php:294
+#: includes/CBCurrencyConverterAdmin.php:295
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:38
 msgid "Currency Converter"
 msgstr ""
 
@@ -486,11 +487,11 @@ msgstr ""
 msgid "Currency Converter and rate display"
 msgstr ""
 
-#: templates/admin/support.php:105
+#: templates/admin/support.php:108
 msgid "Currency Converter Changelog"
 msgstr ""
 
-#: templates/admin/support.php:151
+#: templates/admin/support.php:142
 msgid "Currency Converter Pro Addon Changelog"
 msgstr ""
 
@@ -498,167 +499,167 @@ msgstr ""
 msgid "Currency Converter Settings"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:757
-#: includes/class-cbcurrencyconverter-helper.php:1252
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:115
+#: includes/Helpers/CBCurrencyConverterHelper.php:760
+#: includes/Helpers/CBCurrencyConverterHelper.php:1261
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:115
 msgid "Currency Latest Rates"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1206
-#: includes/class-cbcurrencyconverter-helper.php:1223
+#: includes/Helpers/CBCurrencyConverterHelper.php:1215
+#: includes/Helpers/CBCurrencyConverterHelper.php:1232
 msgid "Currency list to convert and show in Calculator Dropdown"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1272
+#: includes/Helpers/CBCurrencyConverterHelper.php:1281
 msgid "Currency list to convert and show in listing"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:542
+#: includes/CBCurrencyConverterAdmin.php:497
 msgid "Currency rate cache has been reset"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1166
+#: includes/Helpers/CBCurrencyConverterHelper.php:1175
 msgid "Currencylayer Api Key(Free)"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:39
+#: includes/Helpers/CBCurrencyConverterHelper.php:38
 msgid "Currencylayer.com Free Plan(only base USD)"
 msgstr ""
 
 #. %s: curency name
-#: includes/class-cbcurrencyconverter-setting.php:1040
+#: includes/CBCurrencyconverterSetting.php:1038
 #, php-format
 msgid "Custom rates based on %s"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:254
+#: includes/Helpers/CBCurrencyConverterHelper.php:253
 msgid "Czech Republic Koruna"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1093
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:263
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:150
-#: widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php:154
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:43
+#: includes/Helpers/CBCurrencyConverterHelper.php:1096
+#: includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php:154
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:261
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:120
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:43
 msgid "Decimal Point"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1094
+#: includes/Helpers/CBCurrencyConverterHelper.php:1097
 msgid "decimal point position"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1198
-#: includes/class-cbcurrencyconverter-helper.php:1256
+#: includes/Helpers/CBCurrencyConverterHelper.php:1207
+#: includes/Helpers/CBCurrencyConverterHelper.php:1265
 msgid "Default Amount"
 msgstr ""
 
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:281
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:176
-#: widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php:165
-#: widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php:170
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:61
+#: includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php:165
+#: includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php:170
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:279
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:146
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:61
 msgid "Default Amount for Calculator"
 msgstr ""
 
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:369
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:277
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:367
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:247
 msgid "Default Amount for List"
 msgstr ""
 
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:122
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:122
 msgid "Default Amount for list"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1257
+#: includes/Helpers/CBCurrencyConverterHelper.php:1266
 msgid "Default amount for listing"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1263
+#: includes/Helpers/CBCurrencyConverterHelper.php:1272
 msgid "Default From Currency"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1074
+#: includes/Helpers/CBCurrencyConverterHelper.php:1077
 msgid "Default Settings"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:255
+#: includes/Helpers/CBCurrencyConverterHelper.php:254
 msgid "Denmark Krone"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1138
+#: includes/Helpers/CBCurrencyConverterHelper.php:1147
 msgid ""
 "Different api sources gives different rates based on their historical data. "
 "If you are using pro api then check the <strong>Pro & Extended Apis</strong> "
 "tab for api key configuration."
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1120
+#: includes/Helpers/CBCurrencyConverterHelper.php:1123
 msgid "Disable"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:394
+#: includes/CBCurrencyConverterAdmin.php:394
 msgid "Documentation"
 msgstr ""
 
-#: templates/admin/support.php:212
+#: templates/admin/support.php:205
 msgid "Documentation & User Guide"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:256
+#: includes/Helpers/CBCurrencyConverterHelper.php:255
 msgid "Dominican Republic Peso"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:257
+#: includes/Helpers/CBCurrencyConverterHelper.php:256
 msgid "East Caribbean Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:258
+#: includes/Helpers/CBCurrencyConverterHelper.php:257
 msgid "Egypt Pound"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:259
+#: includes/Helpers/CBCurrencyConverterHelper.php:258
 msgid "El Salvador Colon"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1119
+#: includes/Helpers/CBCurrencyConverterHelper.php:1122
 msgid "Enable"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:243
+#: includes/CBCurrencyConverterAdmin.php:243
 msgid "Error"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:260
+#: includes/Helpers/CBCurrencyConverterHelper.php:259
 msgid "Estonia Kroon"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:261
+#: includes/Helpers/CBCurrencyConverterHelper.php:260
 msgid "Euro Member Countries"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:21
+#: includes/Helpers/CBCurrencyConverterHelper.php:20
 msgid "Exchangerate.host(Free Api)"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1145
+#: includes/Helpers/CBCurrencyConverterHelper.php:1154
 msgid "Exchangeratehost Api Key(Free Api)"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:262
+#: includes/Helpers/CBCurrencyConverterHelper.php:261
 msgid "Falkland Islands Pound"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:263
+#: includes/Helpers/CBCurrencyConverterHelper.php:262
 msgid "Fiji Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1336
+#: includes/Helpers/CBCurrencyConverterHelper.php:1345
 msgid ""
 "Following option values created by this plugin(including addon) from "
 "WordPress core option table"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1025
+#: includes/Helpers/CBCurrencyConverterHelper.php:1028
 msgid "Following transient caches are stored by this plugin"
 msgstr ""
 
@@ -666,76 +667,76 @@ msgstr ""
 msgid "From"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:182
-#: public/class-cbcurrencyconverter-public.php:134
+#: includes/CBCurrencyConverterAdmin.php:182
+#: includes/CBCurrencyConverterPublic.php:133
 msgid "From and to currency both are same!"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1205
+#: includes/Helpers/CBCurrencyConverterHelper.php:1214
 msgid "From Currencies"
 msgstr ""
 
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:80
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:80
 msgid "From Default Currency"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1214
+#: includes/Helpers/CBCurrencyConverterHelper.php:1223
 msgid "From default currency"
 msgstr ""
 
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:186
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:156
 msgid "From Enable Currencies"
 msgstr ""
 
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:70
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:70
 msgid "From Enabled Currencies"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:994
+#: includes/Helpers/CBCurrencyConverterHelper.php:997
 msgid "General"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:264
+#: includes/Helpers/CBCurrencyConverterHelper.php:263
 msgid "Georgian Lari"
 msgstr ""
 
-#: templates/admin/support.php:49
+#: templates/admin/support.php:50
 msgid "Get Free & Pro Addons"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:265
+#: includes/Helpers/CBCurrencyConverterHelper.php:264
 msgid "Ghana Cedis"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:266
+#: includes/Helpers/CBCurrencyConverterHelper.php:265
 msgid "Gibraltar Pound"
 msgstr ""
 
-#: templates/admin/support.php:37
+#: templates/admin/support.php:38
 msgid "Global Settings"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:267
+#: includes/Helpers/CBCurrencyConverterHelper.php:266
 msgid "Guatemala Quetzal"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:268
+#: includes/Helpers/CBCurrencyConverterHelper.php:267
 msgid "Guernsey Pound"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:269
+#: includes/Helpers/CBCurrencyConverterHelper.php:268
 msgid "Guyana Dollar"
 msgstr ""
 
-#: templates/admin/support.php:191
+#: templates/admin/support.php:183
 msgid "Help & Supports"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:270
+#: includes/Helpers/CBCurrencyConverterHelper.php:269
 msgid "Honduras Lempira"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:271
+#: includes/Helpers/CBCurrencyConverterHelper.php:270
 msgid "Hong Kong Dollar"
 msgstr ""
 
@@ -747,420 +748,419 @@ msgstr ""
 msgid "https://codeboxr.com/product/cbx-currency-converter-for-wordpress/"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:235
+#: includes/CBCurrencyConverterAdmin.php:235
 msgid "hue selection slider"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:272
+#: includes/Helpers/CBCurrencyConverterHelper.php:271
 msgid "Hungary Forint"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:273
+#: includes/Helpers/CBCurrencyConverterHelper.php:272
 msgid "Iceland Krona"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:274
+#: includes/Helpers/CBCurrencyConverterHelper.php:273
 msgid "India Rupee"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:275
+#: includes/Helpers/CBCurrencyConverterHelper.php:274
 msgid "Indonesia Rupiah"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:240
+#: includes/CBCurrencyConverterAdmin.php:240
 msgid "Info"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:276
+#: includes/Helpers/CBCurrencyConverterHelper.php:275
 msgid "Iran Rial"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:277
+#: includes/Helpers/CBCurrencyConverterHelper.php:276
 msgid "Isle of Man Pound"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:278
+#: includes/Helpers/CBCurrencyConverterHelper.php:277
 msgid "Israel Shekel"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:279
+#: includes/Helpers/CBCurrencyConverterHelper.php:278
 msgid "Jamaica Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:280
+#: includes/Helpers/CBCurrencyConverterHelper.php:279
 msgid "Japan Yen"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:281
+#: includes/Helpers/CBCurrencyConverterHelper.php:280
 msgid "Jersey Pound"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:282
+#: includes/Helpers/CBCurrencyConverterHelper.php:281
 msgid "Kazakhstan Tenge"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:286
+#: includes/Helpers/CBCurrencyConverterHelper.php:285
 msgid "Kenya Shilling"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:283
+#: includes/Helpers/CBCurrencyConverterHelper.php:282
 msgid "Korea (North) Won"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:284
+#: includes/Helpers/CBCurrencyConverterHelper.php:283
 msgid "Korea (South) Won"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:285
+#: includes/Helpers/CBCurrencyConverterHelper.php:284
 msgid "Kyrgyzstan Som"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:287
+#: includes/Helpers/CBCurrencyConverterHelper.php:286
 msgid "Laos Kip"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:288
+#: includes/Helpers/CBCurrencyConverterHelper.php:287
 msgid "Latvia Lat"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1080
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:138
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:33
+#: includes/Helpers/CBCurrencyConverterHelper.php:1083
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:108
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:33
 msgid "Layout"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:289
+#: includes/Helpers/CBCurrencyConverterHelper.php:288
 msgid "Lebanon Pound"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:290
+#: includes/Helpers/CBCurrencyConverterHelper.php:289
 msgid "Liberia Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:71
-#: includes/class-cbcurrencyconverter-helper.php:1086
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:256
+#: includes/Helpers/CBCurrencyConverterHelper.php:70
+#: includes/Helpers/CBCurrencyConverterHelper.php:1089
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:254
 msgid "List"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1003
+#: includes/Helpers/CBCurrencyConverterHelper.php:1006
 msgid "List Default"
 msgstr ""
 
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:387
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:385
 msgid "List Default From Currency"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1243
+#: includes/Helpers/CBCurrencyConverterHelper.php:1252
 msgid "List Default Settings"
 msgstr ""
 
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:302
-#: widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php:171
+#: includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php:171
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:272
 msgid "List From Currency"
 msgstr ""
 
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:141
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:141
 msgid "list From Currency"
 msgstr ""
 
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:268
-#: widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php:169
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:113
+#: includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php:169
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:238
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:113
 msgid "List Header"
 msgstr ""
 
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:362
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:360
 msgid "List Header:"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1249
+#: includes/Helpers/CBCurrencyConverterHelper.php:1258
 msgid "List Heading"
 msgstr ""
 
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:116
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:125
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:135
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:145
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:116
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:125
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:135
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:145
 msgid "List Settings"
 msgstr ""
 
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:359
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:262
-#: widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php:168
+#: includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php:168
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:357
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:232
 msgid "List settings"
 msgstr ""
 
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:375
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:289
-#: widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php:172
+#: includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php:172
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:373
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:259
 msgid "List To Currencies"
 msgstr ""
 
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:131
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:131
 msgid "list To Currency"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:291
+#: includes/Helpers/CBCurrencyConverterHelper.php:290
 msgid "Lithuania Litas"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:244
+#: includes/CBCurrencyConverterAdmin.php:244
 msgid "Loading"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1021
+#: includes/Helpers/CBCurrencyConverterHelper.php:1024
 msgid "Loading ..."
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:292
+#: includes/Helpers/CBCurrencyConverterHelper.php:291
 msgid "Macedonia Denar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:293
+#: includes/Helpers/CBCurrencyConverterHelper.php:292
 msgid "Malaysia Ringgit"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:294
+#: includes/Helpers/CBCurrencyConverterHelper.php:293
 msgid "Mauritius Rupee"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:295
+#: includes/Helpers/CBCurrencyConverterHelper.php:294
 msgid "Mexico Peso"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:296
+#: includes/Helpers/CBCurrencyConverterHelper.php:295
 msgid "Mongolia Tughrik"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:297
+#: includes/Helpers/CBCurrencyConverterHelper.php:296
 msgid "Mozambique Metical"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:298
+#: includes/Helpers/CBCurrencyConverterHelper.php:297
 msgid "Namibia Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:299
+#: includes/Helpers/CBCurrencyConverterHelper.php:298
 msgid "Nepal Rupee"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:300
+#: includes/Helpers/CBCurrencyConverterHelper.php:299
 msgid "Netherlands Antilles Guilder"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:301
+#: includes/Helpers/CBCurrencyConverterHelper.php:300
 msgid "New Zealand Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:302
+#: includes/Helpers/CBCurrencyConverterHelper.php:301
 msgid "Nicaragua Cordoba"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:303
+#: includes/Helpers/CBCurrencyConverterHelper.php:302
 msgid "Nigeria Naira"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:304
+#: includes/Helpers/CBCurrencyConverterHelper.php:303
 msgid "Norway Krone"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:246
+#: includes/CBCurrencyConverterAdmin.php:246
 msgid "OK"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:305
+#: includes/Helpers/CBCurrencyConverterHelper.php:304
 msgid "Oman Rial"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:209
+#: includes/CBCurrencyConverterAdmin.php:209
 msgid "Oops, unable to copy"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1159
+#: includes/Helpers/CBCurrencyConverterHelper.php:1168
 msgid "Openexchangerates Api Key(Free)"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:33
+#: includes/Helpers/CBCurrencyConverterHelper.php:32
 msgid "Openexchangerates.org Free Plan(only base USD)"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1344
-#: includes/class-cbcurrencyconverter-helper.php:1365
+#: includes/Helpers/CBCurrencyConverterHelper.php:1353
+#: includes/Helpers/CBCurrencyConverterHelper.php:1374
 msgid "Option ID"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1343
-#: includes/class-cbcurrencyconverter-helper.php:1364
+#: includes/Helpers/CBCurrencyConverterHelper.php:1352
+#: includes/Helpers/CBCurrencyConverterHelper.php:1373
 msgid "Option Name"
 msgstr ""
 
-#: templates/admin/support.php:247
+#: templates/admin/support.php:242
 msgid "Other WordPress Plugins"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:306
+#: includes/Helpers/CBCurrencyConverterHelper.php:305
 msgid "Pakistan Rupee"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:307
+#: includes/Helpers/CBCurrencyConverterHelper.php:306
 msgid "Panama Balboa"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:310
+#: includes/Helpers/CBCurrencyConverterHelper.php:309
 msgid "Papua New Guinean Kina"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:308
+#: includes/Helpers/CBCurrencyConverterHelper.php:307
 msgid "Paraguay Guarani"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:309
+#: includes/Helpers/CBCurrencyConverterHelper.php:308
 msgid "Peru Nuevo Sol"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:311
+#: includes/Helpers/CBCurrencyConverterHelper.php:310
 msgid "Philippines Peso"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:1007
+#: includes/CBCurrencyconverterSetting.php:1005
 msgid "Please choose at least one currency from above field."
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:181
-#: public/class-cbcurrencyconverter-public.php:133
+#: includes/CBCurrencyConverterAdmin.php:181
+#: includes/CBCurrencyConverterPublic.php:132
 msgid "Please choose from or to currency properly"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1167
+#: includes/Helpers/CBCurrencyConverterHelper.php:1176
 msgid ""
 "Please collect your key from <a href=\"https://currencylayer.com/\" "
 "target=\"_blank\">currencylayer.com</a>, it has both free and pro api"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1146
+#: includes/Helpers/CBCurrencyConverterHelper.php:1155
 msgid ""
 "Please collect your key from <a href=\"https://exchangerate.host/product\" "
 "target=\"_blank\">exchangerate.host</a>, it's <strong>free</strong>, you can "
 "try their pro also"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1160
+#: includes/Helpers/CBCurrencyConverterHelper.php:1169
 msgid ""
 "Please collect your key from <a href=\"https://openexchangerates.org/\" "
 "target=\"_blank\">openexchangerates.org</a>, it has both free and pro api"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1153
+#: includes/Helpers/CBCurrencyConverterHelper.php:1162
 msgid ""
 "Please collect your key from <a href=\"https://www.alphavantage."
 "co/support/#api-key\" target=\"_blank\">alphavantage.co</a>, it's <strong>"
 "free</strong>, you can try their pro also"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:183
-#: admin/class-cbcurrencyconverter-admin.php:205
-#: admin/class-cbcurrencyconverter-admin.php:274
-#: includes/class-cbcurrencyconverter-setting.php:658
-#: public/class-cbcurrencyconverter-public.php:135
+#: includes/CBCurrencyConverterAdmin.php:183
+#: includes/CBCurrencyConverterAdmin.php:205
+#: includes/CBCurrencyConverterAdmin.php:274
+#: includes/CBCurrencyConverterPublic.php:134
+#: includes/CBCurrencyconverterSetting.php:656
 msgid "Please Select"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:184
-#: public/class-cbcurrencyconverter-public.php:136
+#: includes/CBCurrencyConverterAdmin.php:184
+#: includes/CBCurrencyConverterPublic.php:135
 msgid "Please wait, processing."
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:1087
+#: includes/CBCurrencyconverterSetting.php:1085
 msgid "Plugin Woocommerce is installed and activated"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:1082
+#: includes/CBCurrencyconverterSetting.php:1080
 msgid "Plugin Woocommerce is not installed or activated"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:312
+#: includes/Helpers/CBCurrencyConverterHelper.php:311
 msgid "Poland Zloty"
 msgstr ""
 
-#: templates/admin/support.php:240
+#: templates/admin/support.php:235
 msgid "Pro Addon Support"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:313
+#: includes/Helpers/CBCurrencyConverterHelper.php:312
 msgid "Qatar Riyal"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1125
+#: includes/Helpers/CBCurrencyConverterHelper.php:1128
 msgid "Rate Api Cache Time(Hr)"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1115
+#: includes/Helpers/CBCurrencyConverterHelper.php:1118
 msgid "Rate api caching is recommended"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1290
+#: includes/Helpers/CBCurrencyConverterHelper.php:1299
 msgid "Remove Data on Uninstall?"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:203
+#: includes/CBCurrencyConverterAdmin.php:203
 msgid "Request failed, please reload the page."
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1298
+#: includes/Helpers/CBCurrencyConverterHelper.php:1307
 msgid "Reset All Settings"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1307
+#: includes/Helpers/CBCurrencyConverterHelper.php:1316
 msgid "Reset Api Rate cache"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1306
+#: includes/Helpers/CBCurrencyConverterHelper.php:1315
 msgid "Reset Currency Rate Cache"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1299
+#: includes/Helpers/CBCurrencyConverterHelper.php:1308
 msgid "Reset Data"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1299
+#: includes/Helpers/CBCurrencyConverterHelper.php:1308
 msgid "Reset option values created by this plugin"
 msgstr ""
 
-#: templates/admin/support.php:220
+#: templates/admin/support.php:214
 msgid "Review & Rate CBX Currency Converter Plugin"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:314
+#: includes/Helpers/CBCurrencyConverterHelper.php:313
 msgid "Romania New Leu"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:315
+#: includes/Helpers/CBCurrencyConverterHelper.php:314
 msgid "Russia Ruble"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:316
+#: includes/Helpers/CBCurrencyConverterHelper.php:315
 msgid "Saint Helena Pound"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:317
+#: includes/Helpers/CBCurrencyConverterHelper.php:316
 msgid "Saudi Arabia Riyal"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:225
+#: includes/CBCurrencyConverterAdmin.php:225
 msgid "Save"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:230
+#: includes/CBCurrencyConverterAdmin.php:230
 msgid "save and close"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:1311
-#: templates/admin/settings.php:47
+#: includes/CBCurrencyconverterSetting.php:1309 templates/admin/settings.php:47
 msgid "Save Settings"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:250
+#: includes/CBCurrencyConverterAdmin.php:250
 msgid "Search"
 msgstr ""
 
@@ -1168,134 +1168,134 @@ msgstr ""
 msgid "Select a currency"
 msgstr ""
 
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:291
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:261
 msgid "Select currencies"
 msgstr ""
 
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:188
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:158
 msgid "Select currencies from"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:185
-#: public/class-cbcurrencyconverter-public.php:137
+#: includes/CBCurrencyConverterAdmin.php:185
+#: includes/CBCurrencyConverterPublic.php:136
 msgid "Select Currency"
 msgstr ""
 
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:212
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:248
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:304
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:182
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:218
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:274
 msgid "Select currency"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:186
-#: public/class-cbcurrencyconverter-public.php:138 templates/calculator.php:36
+#: includes/CBCurrencyConverterAdmin.php:186
+#: includes/CBCurrencyConverterPublic.php:137 templates/calculator.php:36
 #: templates/calculator.php:51
 msgid "Select From Currency"
 msgstr ""
 
-#: widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php:152
+#: includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php:152
 msgid "Select Layout"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1081
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:140
+#: includes/Helpers/CBCurrencyConverterHelper.php:1084
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:110
 msgid "Select layout"
 msgstr ""
 
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:251
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:249
 msgid "Select Layout:"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:207
-#: admin/class-cbcurrencyconverter-admin.php:276
+#: includes/CBCurrencyConverterAdmin.php:207
+#: includes/CBCurrencyConverterAdmin.php:276
 msgid "Select Media"
 msgstr ""
 
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:225
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:195
 msgid "Select to currencies"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:187
-#: public/class-cbcurrencyconverter-public.php:139 templates/calculator.php:62
+#: includes/CBCurrencyConverterAdmin.php:187
+#: includes/CBCurrencyConverterPublic.php:138 templates/calculator.php:62
 #: templates/calculator.php:74
 msgid "Select To Currency"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:236
+#: includes/CBCurrencyConverterAdmin.php:236
 msgid "selection slider"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:318
+#: includes/Helpers/CBCurrencyConverterHelper.php:317
 msgid "Serbia Dinar"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:361
+#: includes/CBCurrencyConverterAdmin.php:361
 msgid "Settings"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:319
+#: includes/Helpers/CBCurrencyConverterHelper.php:318
 msgid "Seychelles Rupee"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1174
+#: includes/Helpers/CBCurrencyConverterHelper.php:1183
 msgid "Shortcode & Demo"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1175
+#: includes/Helpers/CBCurrencyConverterHelper.php:1184
 msgid ""
 "Shortcode and demo based on default setting, please save once to check "
 "change."
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:208
+#: includes/CBCurrencyConverterAdmin.php:208
 msgid "Shortcode copied to clipboard"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1101
+#: includes/Helpers/CBCurrencyConverterHelper.php:1104
 msgid ""
 "Show currency symbol where applicable. If symbol used then without full "
 "currency name Currency code and symbol will be used in some places."
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1107
+#: includes/Helpers/CBCurrencyConverterHelper.php:1110
 msgid "Show Flag"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1108
+#: includes/Helpers/CBCurrencyConverterHelper.php:1111
 msgid "Show flag based on currency belongs to origin country."
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1100
+#: includes/Helpers/CBCurrencyConverterHelper.php:1103
 msgid "Show Symbol"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:320
+#: includes/Helpers/CBCurrencyConverterHelper.php:319
 msgid "Singapore Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:321
+#: includes/Helpers/CBCurrencyConverterHelper.php:320
 msgid "Solomon Islands Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:322
+#: includes/Helpers/CBCurrencyConverterHelper.php:321
 msgid "Somalia Shilling"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:641
-#: admin/class-cbcurrencyconverter-admin.php:668
-#: admin/class-cbcurrencyconverter-admin.php:718
+#: includes/CBCurrencyConverterAdmin.php:601
+#: includes/CBCurrencyConverterAdmin.php:628
+#: includes/CBCurrencyConverterAdmin.php:678
 msgid "Sorry, you don't have enough permission"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:323
+#: includes/Helpers/CBCurrencyConverterHelper.php:322
 msgid "South Africa Rand"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:324
+#: includes/Helpers/CBCurrencyConverterHelper.php:323
 msgid "Sri Lanka Rupee"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:241
+#: includes/CBCurrencyConverterAdmin.php:241
 msgid "Success"
 msgstr ""
 
@@ -1303,32 +1303,32 @@ msgstr ""
 msgid "Support & Docs"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:327
+#: includes/Helpers/CBCurrencyConverterHelper.php:326
 msgid "Suriname Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:325
+#: includes/Helpers/CBCurrencyConverterHelper.php:324
 msgid "Sweden Krona"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:326
+#: includes/Helpers/CBCurrencyConverterHelper.php:325
 msgid "Switzerland Franc"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:328
+#: includes/Helpers/CBCurrencyConverterHelper.php:327
 msgid "Syria Pound"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:329
+#: includes/Helpers/CBCurrencyConverterHelper.php:328
 msgid "Taiwan New Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:330
+#: includes/Helpers/CBCurrencyConverterHelper.php:329
 msgid "Thailand Baht"
 msgstr ""
 
 #. %s : plugin core version
-#: admin/class-cbcurrencyconverter-admin.php:566
+#: includes/CBCurrencyConverterAdmin.php:523
 #, php-format
 msgid ""
 "Thanks for installing/deactivating <strong>CBX Currency Converter</strong> "
@@ -1336,38 +1336,38 @@ msgid ""
 msgstr ""
 
 #. %s: plugin core version
-#: admin/class-cbcurrencyconverter-admin.php:584
+#: includes/CBCurrencyConverterAdmin.php:541
 #, php-format
 msgid ""
 "Thanks for upgrading <strong>CBX Currency Converter</strong> V%s , enjoy the "
 "new features and bug fixes - Codeboxr Team"
 msgstr ""
 
-#: templates/admin/support.php:82
+#: templates/admin/support.php:84
 msgid "Third Party plugin Integration"
 msgstr ""
 
 #. %s: plugin internal link
-#: includes/class-cbcurrencyconverter-helper.php:1127
+#: includes/Helpers/CBCurrencyConverterHelper.php:1130
 #, php-format
 msgid ""
 "Time is in hour, default is 2 hours, rate api cache can be reset from <a "
 "target=\"_blank\" href=\"%s\">tools setting</a>"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:239
+#: includes/CBCurrencyConverterAdmin.php:239
 msgid "Tip"
 msgstr ""
 
-#: widgets/classic_widgets/class-cbcurrencyconverter-widget.php:245
+#: includes/Widgets/Classic/CBCurrencyConverterWidget.php:243
 msgid "Title"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1192
+#: includes/Helpers/CBCurrencyConverterHelper.php:1201
 msgid "Title to show in calculator"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1250
+#: includes/Helpers/CBCurrencyConverterHelper.php:1259
 msgid "Title to show in listing"
 msgstr ""
 
@@ -1375,146 +1375,147 @@ msgstr ""
 msgid "To"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1222
-#: includes/class-cbcurrencyconverter-helper.php:1271
+#: includes/Helpers/CBCurrencyConverterHelper.php:1231
+#: includes/Helpers/CBCurrencyConverterHelper.php:1280
 msgid "To Currencies"
 msgstr ""
 
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:101
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:101
 msgid "To Default Currency"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1231
+#: includes/Helpers/CBCurrencyConverterHelper.php:1240
 msgid "To default currency"
 msgstr ""
 
-#: widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php:223
+#: includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php:193
 msgid "To Enable Currencies"
 msgstr ""
 
-#: widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php:90
+#: includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php:90
 msgid "To Enabled Currencies"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:1283
+#: includes/CBCurrencyconverterSetting.php:1281
 msgid "Toggle All Sections"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:222
+#: includes/CBCurrencyConverterAdmin.php:222
 msgid "toggle color picker dialog"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1008
+#: includes/Helpers/CBCurrencyConverterHelper.php:1011
 msgid "Tools"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1284
+#: includes/Helpers/CBCurrencyConverterHelper.php:1293
 msgid "Tools Settings"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:331
+#: includes/Helpers/CBCurrencyConverterHelper.php:330
 msgid "Trinidad and Tobago Dollar"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:391
+#: includes/CBCurrencyConverterAdmin.php:391
 msgid "Try Pro Addon"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:332
-#: includes/class-cbcurrencyconverter-helper.php:333
+#: includes/Helpers/CBCurrencyConverterHelper.php:331
+#: includes/Helpers/CBCurrencyConverterHelper.php:332
 msgid "Turkey Lira"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:334
+#: includes/Helpers/CBCurrencyConverterHelper.php:333
 msgid "Tuvalu Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:339
+#: includes/Helpers/CBCurrencyConverterHelper.php:338
 msgid "Ugandan Shilling"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:335
+#: includes/Helpers/CBCurrencyConverterHelper.php:334
 msgid "Ukraine Hryvna"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1338
-#: includes/class-cbcurrencyconverter-setting.php:449
+#: includes/CBCurrencyconverterSetting.php:447
+#: includes/Helpers/CBCurrencyConverterHelper.php:1347
 msgid "Uncheck All"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:225
+#: includes/Helpers/CBCurrencyConverterHelper.php:224
 msgid "United Arab Emirates dirham"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:336
+#: includes/Helpers/CBCurrencyConverterHelper.php:335
 msgid "United Kingdom Pound"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:337
+#: includes/Helpers/CBCurrencyConverterHelper.php:336
 msgid "United States Dollar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-setting.php:69
+#: includes/CBCurrencyConverter.php:116
+#: includes/CBCurrencyconverterSetting.php:67
 msgid "Unserializing instances of this class is forbidden."
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:206
-#: admin/class-cbcurrencyconverter-admin.php:275
+#: includes/CBCurrencyConverterAdmin.php:206
+#: includes/CBCurrencyConverterAdmin.php:275
 msgid "Upload"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:338
+#: includes/Helpers/CBCurrencyConverterHelper.php:337
 msgid "Uruguay Peso"
 msgstr ""
 
-#: admin/class-cbcurrencyconverter-admin.php:224
+#: includes/CBCurrencyConverterAdmin.php:224
 msgid "use previous color"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1114
+#: includes/Helpers/CBCurrencyConverterHelper.php:1117
 msgid "Use Rate Api Caching"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:340
+#: includes/Helpers/CBCurrencyConverterHelper.php:339
 msgid "Uzbekistan Som"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:341
+#: includes/Helpers/CBCurrencyConverterHelper.php:340
 msgid "Venezuela Bolivar"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:342
+#: includes/Helpers/CBCurrencyConverterHelper.php:341
 msgid "Viet Nam Dong"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:345
+#: includes/Helpers/CBCurrencyConverterHelper.php:344
 msgid "West African CFA franc"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1215
+#: includes/Helpers/CBCurrencyConverterHelper.php:1224
 msgid "What Will Be Your Default  Currency To Convert From"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1199
+#: includes/Helpers/CBCurrencyConverterHelper.php:1208
 msgid "What Will Be Your Default Amount of Currency For Calculating"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1264
+#: includes/Helpers/CBCurrencyConverterHelper.php:1273
 msgid "What Will Be Your Default Currency For Listing"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:1232
+#: includes/Helpers/CBCurrencyConverterHelper.php:1241
 msgid "What Will Be Your Default To Currency"
 msgstr ""
 
-#: templates/admin/support.php:98
+#: templates/admin/support.php:101
 msgid "Woocommerce"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:343
+#: includes/Helpers/CBCurrencyConverterHelper.php:342
 msgid "Yemen Rial"
 msgstr ""
 
-#: includes/class-cbcurrencyconverter-helper.php:344
+#: includes/Helpers/CBCurrencyConverterHelper.php:343
 msgid "Zimbabwe Dollar"
 msgstr ""

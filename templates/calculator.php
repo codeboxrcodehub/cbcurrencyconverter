@@ -82,7 +82,7 @@ $html .= '</div>';
 
 $currency_nonce = wp_create_nonce( "cbcurrencyconverter" );
 
-$html .= '<div class="cbcurrencyconverter_amont_result_combo">';
+$html .= '<div class="cbcurrencyconverter_action_combo">';
 
 $html .= '<div class="cbcurrencyconverter_form_field cbcurrencyconverter_form_field_amount">';
 $html .= '<span  class="cbcurrencyconverter_label sr-only">' . esc_html__( 'Amount', 'cbcurrencyconverter' ) . '</span>';
@@ -92,11 +92,11 @@ $html .= '</div>';
 $html .= '</div>';
 
 
-$html .= '<div class="cbconverter_result_wrapper cbconverter_result_wrapper_' . esc_attr( $reference ) . '">';
-$html .= '<button class="button btn btn-primary cbcurrencyconverter_calculate ld-ext-right" data-decimal-point="' . absint( $decimal_point ) . '" data-busy = "0" data-ref = "' . esc_attr( $reference ) . '" data-nonce="' . $currency_nonce . '">' . esc_html__( 'Convert', 'cbcurrencyconverter' ) . '<span class="ld ld-ring ld-spin"></span></button>';
+$html .= '<div class="cbcurrencyconverter_form_action_wrapper cbcurrencyconverter_form_action_wrapper_' . esc_attr( $reference ) . '">';
+$html .= '<button type="button" class="button btn btn-primary cbcurrencyconverter_calculate ld-ext-right" data-decimal-point="' . absint( $decimal_point ) . '" data-busy = "0" data-ref = "' . esc_attr( $reference ) . '" data-nonce="' . $currency_nonce . '">' . esc_html__( 'Convert', 'cbcurrencyconverter' ) . '<span class="ld ld-ring ld-spin"></span></button>';
 $html .= '</div>'; //.cbconverter_result_wrapper
 
-$html .= '</div>';//.cbcurrencyconverter_amont_result_combo
+$html .= '</div>';//.cbcurrencyconverter_action_combo
 
 $html .= '<div  class="cbcurrencyconverter_result cbcurrencyconverter_result_' . esc_attr( $reference ) . '"></div>';
 

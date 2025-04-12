@@ -25,7 +25,7 @@ if ( ! defined( 'WPINC' ) ) {
  * @subpackage CBCurrencyConverter/includes
  * @author     codeboxr <info@codeboxr.com>
  */
-class CBCurrencyConverter_Deactivator {
+class CBCurrencyConverterDeactivator {
 
 	/**
 	 * Short Description. (use period)
@@ -45,4 +45,4 @@ class CBCurrencyConverter_Deactivator {
 
 		do_action( 'cbcurrencyconverter_plugin_deactivate' );
 	}//end deactivate
-}//end class CBCurrencyConverter_Deactivator
+}//end class CBCurrencyConverterDeactivator

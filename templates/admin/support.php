@@ -17,7 +17,8 @@ if ( ! defined( 'WPINC' ) ) {
 $plugin_url = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/product/cbx-currency-converter-for-wordpress/' );
 $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbcurrencyconverter-doc/' );
 ?>
-<div class="cbx-chota cbcurrencyconverter-page-wrapper cbcurrencyconverter-support-wrapper" id="cbcurrencyconverter-support">
+<div class="cbx-chota cbcurrencyconverter-page-wrapper cbcurrencyconverter-support-wrapper"
+     id="cbcurrencyconverter-support">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -33,7 +34,7 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                     </div>
                     <div class="wp-heading-wrap-right pull-right">
 						<?php do_action( 'cbcurrencyconverter_wpheading_wrap_right_before', 'support' ); ?>
-                        <a href="<?php echo esc_url(admin_url( 'options-general.php?page=cbcurrencyconverter' )); ?>"
+                        <a href="<?php echo esc_url( admin_url( 'options-general.php?page=cbcurrencyconverter' ) ); ?>"
                            class="button outline primary pull-right"><?php esc_html_e( 'Global Settings', 'cbcurrencyconverter' ); ?></a>
 						<?php do_action( 'cbcurrencyconverter_wpheading_wrap_right_after', 'support' ); ?>
                     </div>
@@ -56,10 +57,11 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                                     <div class="feature-card-body static">
                                         <div class="feature-card-header">
                                             <a href="<?php echo esc_url( $plugin_url ); ?>" target="_blank">
-                                                <?php
-                                                $external_image_url = 'https://codeboxr.com/wp-content/uploads/productshots/8170-profile.png';
-                                                ?>
-                                                <img src="<?php echo esc_url($external_image_url); //phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage ?>" alt="CBX Currency Converter Pro Addon for WordPress" />
+												<?php
+												$external_image_url = 'https://codeboxr.com/wp-content/uploads/productshots/8170-profile.png';
+												?>
+                                                <img src="<?php echo esc_url( $external_image_url ); //phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage ?>"
+                                                     alt="CBX Currency Converter Pro Addon for WordPress"/>
                                             </a>
                                         </div>
                                         <div class="feature-card-description">
@@ -89,7 +91,8 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                                     <defs/>
                                     <path d="M9.4 11.9c-2 0-3.5-1.6-3.5-3.5V5.9c0-.2.2-.4.4-.4s.4.2.4.4v2.5c0 1.5 1.3 2.8 2.8 2.8s2.8-1.3 2.8-2.8v-.7c0-.2.2-.4.4-.4s.4.2.4.4v.6c-.1 2-1.7 3.6-3.7 3.6z"
                                           fill="currentColor"/>
-                                    <path d="M13.2 6.2H5.6c-.2 0-.4-.2-.4-.4s.2-.4.4-.4h7.6c.2 0 .4.2.4.4 0 .3-.2.4-.4.4z" fill="currentColor"/>
+                                    <path d="M13.2 6.2H5.6c-.2 0-.4-.2-.4-.4s.2-.4.4-.4h7.6c.2 0 .4.2.4.4 0 .3-.2.4-.4.4z"
+                                          fill="currentColor"/>
                                     <path d="M8.3 6.2H7c-.2 0-.4-.2-.4-.4V4.3c0-.6.5-1 1-1 .6 0 1 .5 1 1v1.5c0 .3-.1.4-.3.4zm-1-.7h.6V4.3c0-.2-.1-.3-.3-.3-.2 0-.3.1-.3.3v1.2zM11.9 6.2h-1.3c-.2 0-.4-.2-.4-.4V4.3c0-.6.5-1 1-1 .6 0 1 .5 1 1v1.5c0 .3-.1.4-.3.4zm-1-.7h.6V4.3c0-.2-.1-.3-.3-.3-.2 0-.3.1-.3.3v1.2zM10.8 13.2H8c-.2 0-.4-.2-.4-.4v-1.6c0-.2.2-.4.4-.4h2.8c.2 0 .4.2.4.4v1.6c0 .2-.2.4-.4.4zm-2.4-.8h2v-.9h-2v.9z"
                                           fill="currentColor"/>
                                     <path d="M10.7 16.7c-.9 0-1.6-.7-1.6-1.6v-2.3c0-.2.2-.4.4-.4s.4.2.4.4v2.3c0 .5.4.9.9.9s.9-.4.9-.9v-.3c0-.2.2-.4.4-.4s.4.2.4.4v.3c-.2.8-1 1.6-1.8 1.6zM14.4 14.9c-.2 0-.4-.2-.4-.4v-1.9c0-.5-.4-.9-.9-.9s-.9.4-.9.9v.4c0 .2-.2.4-.4.4s-.4-.2-.4-.4v-.5c0-.9.7-1.6 1.6-1.6.9 0 1.6.7 1.6 1.6v1.9c.2.3 0 .5-.2.5zM10.8 7.7H6.2c-.2 0-.3-.2-.3-.4s.2-.4.4-.4h4.5c.2 0 .4.2.4.4s-.2.4-.4.4z"
@@ -108,6 +111,15 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                     <div class="content">
                         <div class="cbx-backend-settings-row">
                             <p>
+                                Version - 3.1.8
+                            </p>
+                            <ul>
+                                <li>[updated] WordPress Core 6.8 compatible</li>
+                                <li>[updated] Minor improvements and code structure refactor</li>
+                            </ul>
+                        </div>
+                        <div class="cbx-backend-settings-row">
+                            <p>
                                 Version - 3.1.7
                             </p>
                             <ul>
@@ -122,27 +134,6 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                                 <li>[fixed] Update notification note icon url fixed</li>
                             </ul>
                         </div>
-                        <div class="cbx-backend-settings-row">
-                            <p>
-                                Version - 3.1.5
-                            </p>
-                            <ul>
-                                <li>[improvement] Style and minor improvement</li>
-                                <li>[updated] WordPress Core 6.7.1 compatible</li>
-                                <li>[updated] Pro addon V1.7.7 released</li>
-                                <li>[updated] Plugin check V1.3.1 compatible</li>
-                            </ul>
-                        </div>
-                        <div class="cbx-backend-settings-row">
-                            <p>
-                                Version - 3.1.4
-                            </p>
-                            <ul>
-                                <li>[improvement] Style improvement</li>
-                                <li>[updated] WordPress Core 6.6.1 compatible</li>
-                                <li>[updated] Pro addon V1.7.6 released</li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
                 <div class="cbx-backend-card dashboard-changelog">
@@ -152,6 +143,15 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                         </div>
                     </div>
                     <div class="content">
+                        <div class="cbx-backend-settings-row">
+                            <p>
+                                Version - 1.7.9
+                            </p>
+                            <ul>
+                                <li>[updated] WordPress Core 6.8 compatible</li>
+                                <li>[updated] Minor improvement</li>
+                            </ul>
+                        </div>
                         <div class="cbx-backend-settings-row">
                             <p>
                                 Version - 1.7.7
@@ -173,14 +173,6 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                                 <li>[updated] Core plugin V3.1.4 released</li>
                             </ul>
                         </div>
-                        <div class="cbx-backend-settings-row">
-                            <p>
-                                Version - 1.7.5
-                            </p>
-                            <ul>
-                                <li>[improvement] Security improvements</li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -199,7 +191,8 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                                     <path d="M10 2.6c-4.4 0-7.9 3.6-7.9 7.9s3.6 7.9 7.9 7.9 7.9-3.6 7.9-7.9-3.5-7.9-7.9-7.9zm1.7 12.3c-.4.2-.7.3-1 .4-.2.1-.5.1-.8.1-.5 0-.9-.1-1.2-.4-.3-.2-.4-.5-.4-.9v-.4c0-.2.1-.3.1-.5l.5-1.8c0-.2.1-.4.1-.5v-.4c0-.2 0-.4-.1-.5-.1-.1-.3-.2-.5-.2-.1 0-.3 0-.4.1-.2 0-.3.1-.4.1l.1-.6c.3-.1.7-.3 1-.3.3-.1.6-.2.9-.2.5 0 .9.1 1.1.4.3.2.4.5.4.9v.4c0 .2-.1.4-.1.5l-.5 1.9c0 .1-.1.3-.1.5v.4c0 .2.1.4.2.5.1.1.3.1.6.1.1 0 .3 0 .4-.1.2 0 .3-.1.3-.1l-.2.6zm-.1-7.3c-.2.2-.5.3-.9.3-.3 0-.6-.1-.9-.3-.2-.2-.3-.5-.3-.8 0-.3.1-.6.4-.8.2-.2.5-.3.9-.3.3 0 .6.1.9.3.2.2.4.5.4.8-.2.3-.3.6-.5.8z"
                                           fill="currentColor"/>
                                 </svg>
-								<?php esc_html_e( 'CBX Currency Converter Plugin Details', 'cbcurrencyconverter' ); ?> </a>
+								<?php esc_html_e( 'CBX Currency Converter Plugin Details', 'cbcurrencyconverter' ); ?>
+                            </a>
                         </div>
                         <div class="cbx-backend-settings-row">
                             <a href="<?php echo esc_url( $doc_url ); ?>" target="_blank">
@@ -212,12 +205,14 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
 								<?php esc_html_e( 'Documentation & User Guide', 'cbcurrencyconverter' ); ?> </a>
                         </div>
                         <div class="cbx-backend-settings-row">
-                            <a href="https://wordpress.org/support/plugin/cbcurrencyconverter/reviews/#new-post" target="_blank">
+                            <a href="https://wordpress.org/support/plugin/cbcurrencyconverter/reviews/#new-post"
+                               target="_blank">
                                 <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M18.3 8.1c-.1-.3-.3-.5-.6-.5l-4.8-.7-2.2-4.4c-.1-.3-.4-.4-.7-.4-.3 0-.5.2-.7.4L7.2 6.9l-4.9.7c-.3 0-.5.2-.6.5-.1.3 0 .6.2.8l3.5 3.4-.8 4.7c0 .3.1.6.3.7.1.1.3.1.4.1.1 0 .2 0 .4-.1l4.3-2.3 4.3 2.3c.1.1.2.1.4.1.4 0 .8-.3.8-.8v-.2l-.8-4.8 3.5-3.4c.1 0 .2-.3.1-.5z"
                                           fill="currentColor"/>
                                 </svg>
-								<?php esc_html_e( 'Review & Rate CBX Currency Converter Plugin', 'cbcurrencyconverter' ); ?> </a>
+								<?php esc_html_e( 'Review & Rate CBX Currency Converter Plugin', 'cbcurrencyconverter' ); ?>
+                            </a>
                         </div>
                         <div class="cbx-backend-settings-row">
                             <a href="https://wordpress.org/support/plugin/cbcurrencyconverter/" target="_blank">
@@ -266,13 +261,13 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
 
 						foreach ( $top_plugins as $link => $title ) {
 							echo '<div class="cbx-backend-settings-row">
-                            <a href="' . esc_url($link) . '" target="_blank">
+                            <a href="' . esc_url( $link ) . '" target="_blank">
                                 <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                     <defs/>
                                     <path d="M16.4 9.1L12.2 5c-.3-.3-.7-.3-1-.2s-.6.5-.6.9v1.7H4.2c-.5 0-.9.4-.9.9v3.4c0 .2.1.5.3.7.2.2.4.3.7.3h6.4v1.7c0 .4.2.7.6.9.4.1.8.1 1-.2l4.1-4.2c.4-.5.4-1.3 0-1.8z"
                                           fill="currentColor"/>
                                 </svg>
-                                ' . esc_attr($title) . '</a>
+                                ' . esc_attr( $title ) . '</a>
                         </div>';
 						}
 						?>
@@ -286,38 +281,26 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                     </div>
                     <div class="content">
 						<?php
+						$items = CBCurrencyConverterHelper::codeboxr_news_feed();
+						if ( $items !== false && count( $items ) > 0 ) {
+							foreach ( $items as $item ) {
+								$url   = $item['url'];
+								$title = $item['title'];
 
-						include_once( ABSPATH . WPINC . '/feed.php' );
-						if ( function_exists( 'fetch_feed' ) ) {
-							//$feed = fetch_feed( 'https://codeboxr.com/feed?post_type=product' );
-							$feed = fetch_feed( 'https://codeboxr.com/feed?post_type=post' );
-							if ( ! is_wp_error( $feed ) ) : $feed->init();
-								$feed->set_output_encoding( 'UTF-8' );     // this is the encoding parameter, and can be left unchanged in almost every case
-								$feed->handle_content_type();              // this double-checks the encoding type
-								$feed->set_cache_duration( 21600 );        // 21,600 seconds is six hours
-								$limit = $feed->get_item_quantity( 10 );   // fetches the 18 most recent RSS feed stories
-								$items = $feed->get_items( 0, $limit );    // this sets the limit and array for parsing the feed
-
-								$blocks = array_slice( $items, 0, 10 );
-
-								//echo '<ul>';
-
-								foreach ( $blocks as $block ) {
-									$url = $block->get_permalink();
-									$url = CBCurrencyConverterHelper::url_utmy( $url ); ?>
-                                    <div class="cbx-backend-settings-row">
-                                        <a href="<?php echo esc_url($url); ?>" target="_blank">
-                                            <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								echo '<div class="cbx-backend-settings-row">';
+								echo '<a href="' . esc_url( $url ) . '" target="_blank">';
+								echo '<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                                 <defs/>
                                                 <path d="M16.4 9.1L12.2 5c-.3-.3-.7-.3-1-.2s-.6.5-.6.9v1.7H4.2c-.5 0-.9.4-.9.9v3.4c0 .2.1.5.3.7.2.2.4.3.7.3h6.4v1.7c0 .4.2.7.6.9.4.1.8.1 1-.2l4.1-4.2c.4-.5.4-1.3 0-1.8z"
                                                       fill="currentColor"/>
-                                            </svg>
-											<?php echo esc_html($block->get_title()); ?></a>
-                                    </div>
-									<?php
-								}//end foreach
-							endif;
-						}
+                                            </svg>';
+
+								//phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+								echo $title;
+								echo '</a>';
+								echo '</div>';
+							}//end for loop
+						}//if data found
 						?>
                     </div>
                 </div>

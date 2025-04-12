@@ -1,5 +1,4 @@
 <?php
-// If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
@@ -24,7 +23,7 @@ if ( ! defined( 'WPINC' ) ) {
  * @subpackage CBCurrencyConverter/public
  * @author     codeboxr <info@codeboxr.com>
  */
-class CBCurrencyConverter_Public {
+class CBCurrencyConverterPublic {
 
 	/**
 	 * The ID of this plugin.
@@ -48,9 +47,9 @@ class CBCurrencyConverter_Public {
 	 * for setting
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string $settings_api The current version of this plugin.
+	 * @var      string $settings The current version of this plugin.
 	 * */
-	private $settings_api;
+	private $settings;
 
 	/**
 	 * Initialize the class and set its properties.
@@ -70,7 +69,7 @@ class CBCurrencyConverter_Public {
 			$this->version = current_time( 'timestamp' ); //for development time only
 		}
 
-		$this->settings_api = new CBCurrencyconverterSetting();
+		$this->settings = new CBCurrencyconverterSetting();
 	}//end of contructor
 
 	public function cbcurrencyconverter_init() {
@@ -259,7 +258,7 @@ class CBCurrencyConverter_Public {
 	 * @return  rating value
 	 */
 	public function cbxconvertcurrency_method_switcher( $conversion_value = 0, $price = 0, $convertfrom = 'USD', $convertto = 'CAD', $decimal_point = 2 ) {
-		$setting    = $this->settings_api;
+		$setting    = $this->settings;
 		$api_source = $setting->get_option( 'api_source', 'cbcurrencyconverter_global', 'alphavantage' );
 
 
@@ -282,15 +281,15 @@ class CBCurrencyConverter_Public {
 	 */
 	public function cbcurrencyconverter_ajax_cur_convert() {
 		//security check
-		if (isset($_POST['cbcurrencyconverter_data']['nonce']) && ! wp_verify_nonce( sanitize_text_field(wp_unslash($_POST['cbcurrencyconverter_data']['nonce'])), 'cbcurrencyconverter_nonce' ) ) {
+		if ( isset( $_POST['cbcurrencyconverter_data']['nonce'] ) && ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['cbcurrencyconverter_data']['nonce'] ) ), 'cbcurrencyconverter_nonce' ) ) {
 			die( 'Security check' );
 		}
 
-		$setting              = $this->settings_api;
+		$setting              = $this->settings;
 		$decimal_point_global = $setting->get_option( 'decimal_point', 'cbcurrencyconverter_global', 2 );
 
 
-		$data          = isset($_POST['cbcurrencyconverter_data'])? wp_unslash($_POST['cbcurrencyconverter_data']) : [];//phpcs:ignore  WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$data          = isset( $_POST['cbcurrencyconverter_data'] ) ? wp_unslash( $_POST['cbcurrencyconverter_data'] ) : [];//phpcs:ignore  WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$decimal_point = isset( $data['decimal'] ) ? absint( $data['decimal'] ) : absint( $decimal_point_global );
 
 
@@ -371,10 +370,10 @@ class CBCurrencyConverter_Public {
 	 */
 	public function init_elementor_widgets() {
 		//include file
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'widgets/elementor-elements/class-cbcurrencyconverter-elemwidget.php';
+		require_once CBCURRENCYCONVERTER_ROOT_PATH . 'includes/Widgets/Elementor/CBCurrencyConverterElemWidget.php';
 
 		//register elementor widget
-		\Elementor\Plugin::instance()->widgets_manager->register( new CBCurrencyConverterElemWidget\Widgets\CBCurrencyConverter_ElemWidget() );
+		\Elementor\Plugin::instance()->widgets_manager->register( new CBCurrencyConverterElemWidget() );
 	}//end widgets_registered
 
 	/**
@@ -398,13 +397,13 @@ class CBCurrencyConverter_Public {
 	public function vc_before_init_actions() {
 
 		if ( ! class_exists( 'CBX_VCParam_DropDownMulti' ) ) {
-			require_once CBCURRENCYCONVERTER_ROOT_PATH . 'widgets/vc-element/params/class-cbcurrencyconverter-vc-param-dropdown-multi.php';
+			require_once CBCURRENCYCONVERTER_ROOT_PATH . 'includes/Widgets/VisualComposer/Params/CBCCVCParamDropDownMulti.php';
 		}
 
 		if ( ! class_exists( 'CBCurrencyConverter_WPBWidget' ) ) {
-			require_once CBCURRENCYCONVERTER_ROOT_PATH . 'widgets/vc-element/class-cbcurrencyconverter-wpbwidget.php';
+			require_once CBCURRENCYCONVERTER_ROOT_PATH . 'includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php';
 		}
 
 		new CBCurrencyConverter_WPBWidget();
 	}//end method vc_before_init_actions
-}//end class CBCurrencyConverter_Public
+}//end class CBCurrencyConverterPublic

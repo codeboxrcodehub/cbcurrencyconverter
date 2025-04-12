@@ -25,7 +25,7 @@ if ( ! defined( 'WPINC' ) ) {
  * @subpackage CBCurrencyConverter/includes
  * @author     codeboxr <info@codeboxr.com>
  */
-class CBCurrencyConverter_Activator {
+class CBCurrencyConverterActivator {
 	/**
 	 * Short Description. (use period)
 	 *
@@ -36,20 +36,25 @@ class CBCurrencyConverter_Activator {
 	public static function activate() {
 		do_action( 'cbcurrencyconverter_plugin_activate' );
 
-		if ( ! cbcurrencyconverter_compatible_wp_version() ) {
+		$wp_version  = '5.3';
+		$php_version = '7.4';
+
+		if ( ! cbcurrencyconverter_compatible_wp_version( $wp_version ) ) {
 			deactivate_plugins( plugin_basename( __FILE__ ) );
-			wp_die( esc_html__( 'CBX Currency Converter plugin requires WordPress 3.5 or higher!', 'cbcurrencyconverter' ) );
+			//phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			wp_die( sprintf( esc_html__( 'CBX Currency Converter plugin requires WordPress %$1s or higher!', 'cbcurrencyconverter' ), $wp_version ) );
 		}
 
-		if ( ! cbcurrencyconverter_compatible_php_version() ) {
+		if ( ! cbcurrencyconverter_compatible_php_version( $php_version ) ) {
 			deactivate_plugins( plugin_basename( __FILE__ ) );
-			wp_die( esc_html__( 'CBX Currency Converter plugin requires PHP 7.4 or higher!', 'cbcurrencyconverter' ) );
+			//phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			wp_die( sprintf( esc_html__( 'CBX Currency Converter plugin requires PHP %$1s or higher!', 'cbcurrencyconverter' ), $php_version ) );
 		}
 
 		set_transient( 'cbcurrencyconverter_activated_notice', 1 );
 
 		// Update the saved version
-		update_option('cbcurrencyconverter_version', CBCURRENCYCONVERTER_VERSION);
+		update_option( 'cbcurrencyconverter_version', CBCURRENCYCONVERTER_VERSION );
 
 		if ( ! function_exists( 'is_plugin_active' ) ) {
 			include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
@@ -68,4 +73,4 @@ class CBCurrencyConverter_Activator {
 			}
 		}
 	}//end activate
-}//end class CBCurrencyConverter_Activator
+}//end class CBCurrencyConverterActivator

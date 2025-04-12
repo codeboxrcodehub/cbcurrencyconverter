@@ -1,5 +1,4 @@
 <?php
-// If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
@@ -114,8 +113,8 @@ class CBCurrencyConverterHelper {
 	/**
 	 * Calculator view template
 	 *
-	 * @param  string  $reference
-	 * @param  array  $instance
+	 * @param string $reference
+	 * @param array $instance
 	 *
 	 * @return string
 	 * @since  2.2
@@ -150,8 +149,8 @@ class CBCurrencyConverterHelper {
 	/**
 	 * List view template
 	 *
-	 * @param  string  $reference
-	 * @param  array  $instance
+	 * @param string $reference
+	 * @param array $instance
 	 *
 	 * @return string
 	 * @since  2.2
@@ -180,8 +179,8 @@ class CBCurrencyConverterHelper {
 	/**
 	 * Calculator inline view(from currency select field is hidden)
 	 *
-	 * @param  string  $reference
-	 * @param  array  $instance
+	 * @param string $reference
+	 * @param array $instance
 	 *
 	 * @return string
 	 *
@@ -543,7 +542,7 @@ class CBCurrencyConverterHelper {
 	/**
 	 * Get symbold for a currency using currency code
 	 *
-	 * @param  string  $currency_code
+	 * @param string $currency_code
 	 *
 	 * @return mixed|string
 	 * @since 3.0.9
@@ -595,12 +594,12 @@ class CBCurrencyConverterHelper {
 	public static function getAllOptionNames() {
 		global $wpdb;
 
-		$prefix       = 'cbcurrencyconverter_';
-		$wild = '%';
-		$like = $wpdb->esc_like( $prefix ) . $wild;
+		$prefix = 'cbcurrencyconverter_';
+		$wild   = '%';
+		$like   = $wpdb->esc_like( $prefix ) . $wild;
 
 		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
-		$option_names = $wpdb->get_results( $wpdb->prepare("SELECT * FROM {$wpdb->options} WHERE option_name LIKE %s", $like), ARRAY_A );
+		$option_names = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM {$wpdb->options} WHERE option_name LIKE %s", $like ), ARRAY_A );
 
 		return apply_filters( 'cbcurrencyconverter_option_names', $option_names );
 	}//end getAllOptionNames
@@ -629,7 +628,7 @@ class CBCurrencyConverterHelper {
 	/**
 	 * Add utm params to any url
 	 *
-	 * @param  string  $url
+	 * @param string $url
 	 *
 	 * @return string
 	 */
@@ -653,7 +652,7 @@ class CBCurrencyConverterHelper {
 	 * @param $price
 	 * @param $convertfrom
 	 * @param $convertto
-	 * @param  int  $decimal_point
+	 * @param int $decimal_point
 	 *
 	 * @return mixed|void
 	 */
@@ -672,7 +671,7 @@ class CBCurrencyConverterHelper {
 	/**
 	 * Explode and trim
 	 *
-	 * @param  string  $string
+	 * @param string $string
 	 *
 	 * @return array
 	 */
@@ -749,7 +748,11 @@ class CBCurrencyConverterHelper {
 		$calc_from_currencies = ( isset( $calculator['enabled_from_currencies'] ) ) ? $calculator['enabled_from_currencies'] : [ 'USD' ];
 		$calc_from_currency   = ( isset( $calculator['from_currency'] ) ) ? $calculator['from_currency'] : 'USD';
 
-		$calc_to_currencies = ( isset( $calculator['enabled_to_currencies'] ) ) ? $calculator['enabled_to_currencies'] : [ 'GBP', 'CAD', 'AUD' ];
+		$calc_to_currencies = ( isset( $calculator['enabled_to_currencies'] ) ) ? $calculator['enabled_to_currencies'] : [
+			'GBP',
+			'CAD',
+			'AUD'
+		];
 		$calc_to_currency   = ( isset( $calculator['to_currency'] ) ) ? $calculator['to_currency'] : 'CAD';
 
 
@@ -825,10 +828,10 @@ class CBCurrencyConverterHelper {
 	/**
 	 * Convert Currency ajax based main method
 	 *
-	 * @param  float  $price
-	 * @param  string  $convertfrom
-	 * @param  string  $convertto
-	 * @param  int  $decimal_point
+	 * @param float $price
+	 * @param string $convertfrom
+	 * @param string $convertto
+	 * @param int $decimal_point
 	 *
 	 * @return string
 	 * @since 3.0.0
@@ -969,7 +972,7 @@ class CBCurrencyConverterHelper {
 	/**
 	 * Kses wysiwyg html
 	 *
-	 * @param  string  $html
+	 * @param string $html
 	 *
 	 * @return mixed|string
 	 *
@@ -1061,9 +1064,9 @@ class CBCurrencyConverterHelper {
 			$cal_from_to_list_currencyp[ $key ] = $value . ' - ' . $key;
 		}*/
 
-		$global_settings    = get_option( 'cbcurrencyconverter_global', [] );
-		$calculator_setting = get_option( 'cbcurrencyconverter_calculator', [] );
-		$list_settings      = get_option( 'cbcurrencyconverter_list', [] );
+		//$global_settings    = get_option( 'cbcurrencyconverter_global', [] );
+		//$calculator_setting = get_option( 'cbcurrencyconverter_calculator', [] );
+		//$list_settings      = get_option( 'cbcurrencyconverter_list', [] );
 
 
 		$rates_api_titles = CBCurrencyConverterHelper::currency_rates_api_titles();
@@ -1124,7 +1127,13 @@ class CBCurrencyConverterHelper {
 				'name'    => 'cache_time',
 				'label'   => esc_html__( 'Rate Api Cache Time(Hr)', 'cbcurrencyconverter' ),
 				/* translators: %s: plugin internal link */
-				'desc'    => sprintf( wp_kses(__( 'Time is in hour, default is 2 hours, rate api cache can be reset from <a target="_blank" href="%s">tools setting</a>', 'cbcurrencyconverter' ), ['a' => ['href' => [], 'target' => [], 'style' => []]]), esc_url(admin_url( 'options-general.php?page=cbcurrencyconverter#cbcurrencyconverter_tools' )) ),
+				'desc'    => sprintf( wp_kses( __( 'Time is in hour, default is 2 hours, rate api cache can be reset from <a target="_blank" href="%s">tools setting</a>', 'cbcurrencyconverter' ), [
+					'a' => [
+						'href'   => [],
+						'target' => [],
+						'style'  => []
+					]
+				] ), esc_url( admin_url( 'options-general.php?page=cbcurrencyconverter#cbcurrencyconverter_tools' ) ) ),
 				'type'    => 'number',
 				'default' => '2',
 				'min'     => 0,
@@ -1135,7 +1144,7 @@ class CBCurrencyConverterHelper {
 			'api_source'              => [
 				'name'    => 'api_source',
 				'label'   => esc_html__( 'Api Source', 'cbcurrencyconverter' ),
-				'desc'    => wp_kses(__( 'Different api sources gives different rates based on their historical data. If you are using pro api then check the <strong>Pro & Extended Apis</strong> tab for api key configuration.', 'cbcurrencyconverter' ), ['strong' => []]),
+				'desc'    => wp_kses( __( 'Different api sources gives different rates based on their historical data. If you are using pro api then check the <strong>Pro & Extended Apis</strong> tab for api key configuration.', 'cbcurrencyconverter' ), [ 'strong' => [] ] ),
 				'type'    => 'select',
 				'default' => 'exchangeratehost',
 				'options' => $rates_api_titles
@@ -1432,4 +1441,49 @@ class CBCurrencyConverterHelper {
 		// Return false if the plugin is not found
 		return '';
 	}//end method get_pro_addon_version
+
+	/**
+	 * Returns codeboxr news feeds using transient cache
+	 *
+	 * @return false|mixed|\SimplePie\Item[]|null
+	 */
+	public static function codeboxr_news_feed() {
+		$cache_key   = 'codeboxr_news_feed_cache';
+		$cached_feed = get_transient( $cache_key );
+
+		$news = false;
+
+		if ( false === $cached_feed ) {
+			include_once ABSPATH . WPINC . '/feed.php'; // Ensure feed functions are available
+			$feed = fetch_feed( 'https://codeboxr.com/feed?post_type=post' );
+
+			if ( is_wp_error( $feed ) ) {
+				return false; // Return false if there's an error
+			}
+
+			$feed->init();
+
+			$feed->set_output_encoding( 'UTF-8' );                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        // this is the encoding parameter, and can be left unchanged in almost every case
+			$feed->handle_content_type();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                // this double-checks the encoding type
+			$feed->set_cache_duration( 21600 );                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          // 21,600 seconds is six hours
+			$limit  = $feed->get_item_quantity( 10 );                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     // fetches the 18 most recent RSS feed stories
+			$items  = $feed->get_items( 0, $limit );
+			$blocks = array_slice( $items, 0, 10 );
+
+			$news = [];
+			foreach ( $blocks as $block ) {
+				$url   = $block->get_permalink();
+				$url   = CBCurrencyConverterHelper::url_utmy( esc_url( $url ) );
+				$title = $block->get_title();
+
+				$news[] = ['url' => $url, 'title' => $title];
+			}
+
+			set_transient( $cache_key, $news, HOUR_IN_SECONDS * 6 ); // Cache for 6 hours
+		} else {
+			$news = $cached_feed;
+		}
+
+		return $news;
+	}//end method codeboxr_news_feed
 }//end of class CBCurrencyConverterHelper

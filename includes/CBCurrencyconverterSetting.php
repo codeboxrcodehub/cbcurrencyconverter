@@ -14,9 +14,7 @@ if ( ! defined( 'WPINC' ) ) {
  * @example src/settings-api.php How to use the class
  *
  */
-if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
-
-	class CBCurrencyconverterSetting {
+class CBCurrencyconverterSetting {
 		/**
 		 * settings sections array
 		 *
@@ -54,19 +52,19 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 		/**
 		 * Cloning is forbidden.
 		 *
-		 * @since 2.1
+		 * @since 3.1.7
 		 */
 		public function __clone() {
-			wc_doing_it_wrong( __FUNCTION__, esc_html__( 'Cloning is forbidden.', 'cbcurrencyconverter' ), '2.1' );
+			cbcurrencyconverter_doing_it_wrong( __FUNCTION__, esc_html__( 'Cloning is forbidden.', 'cbcurrencyconverter' ), '3.1.7' );
 		}//end method clone
 
 		/**
 		 * Unserializing instances of this class is forbidden.
 		 *
-		 * @since 2.1
+		 * @since 3.1.7
 		 */
 		public function __wakeup() {
-			wc_doing_it_wrong( __FUNCTION__, esc_html__( 'Unserializing instances of this class is forbidden.', 'cbcurrencyconverter' ), '2.1' );
+			cbcurrencyconverter_doing_it_wrong( __FUNCTION__, esc_html__( 'Unserializing instances of this class is forbidden.', 'cbcurrencyconverter' ), '3.1.7' );
 		}//end method wakeup
 
 		public function __construct() {
@@ -200,6 +198,7 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 
 			// creates our settings in the options table
 			foreach ( $this->settings_sections as $section ) {
+                //phpcs:ignore PluginCheck.CodeAnalysis.SettingSanitization.register_settingDynamic
 				register_setting( $section['id'], $section['id'], [ $this, 'sanitize_options' ] );
 			}
 		}//end method admin_init
@@ -594,7 +593,7 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 			$size = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : 'regular selecttwo-select';
 
 			if ( $args['placeholder'] == '' ) {
-				$args['placeholder'] = esc_html__( 'Please Select', 'cbxwpbookmark' );
+				$args['placeholder'] = esc_html__( 'Please Select', 'cbcurrencyconverter' );
 			}
 
 			$html_id = "{$args['section']}_{$args['id']}";
@@ -1322,4 +1321,3 @@ if ( ! class_exists( 'CBCurrencyconverterSetting' ) ):
 			<?php
 		}//end show_forms
 	}//end class CBCurrencyconverterSetting
-endif;

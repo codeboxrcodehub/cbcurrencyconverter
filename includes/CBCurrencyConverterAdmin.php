@@ -25,7 +25,7 @@ if ( ! defined( 'WPINC' ) ) {
  * @subpackage CBCurrencyConverter/admin
  * @author     codeboxr <info@codeboxr.com>
  */
-class CBCurrencyConverter_Admin {
+class CBCurrencyConverterAdmin {
 
 	/**
 	 * The ID of this plugin.
@@ -50,15 +50,15 @@ class CBCurrencyConverter_Admin {
 	 * for setting
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string $settings_api The current version of this plugin.
+	 * @var      string $settings The current version of this plugin.
 	 * */
-	private $settings_api;
+	private $settings;
 
 	/**
 	 * Initialize the class and set its properties.
 	 *
-	 * @param string $plugin_name The name of this plugin.
-	 * @param string $version The version of this plugin.
+	 * @param  string  $plugin_name  The name of this plugin.
+	 * @param  string  $version  The version of this plugin.
 	 *
 	 * @since    1.0.0
 	 *
@@ -72,7 +72,7 @@ class CBCurrencyConverter_Admin {
 			$this->version = current_time( 'timestamp' ); //for development time only
 		}
 
-		$this->settings_api = new CBCurrencyconverterSetting();
+		$this->settings = new CBCurrencyconverterSetting();
 	}//end of oonstructor
 
 	/**
@@ -159,15 +159,15 @@ class CBCurrencyConverter_Admin {
 
 		//main setting page
 		if ( $page == 'cbcurrencyconverter' ) {
-			wp_register_script( 'awesome-notifications', $vendors_url_part . 'awesome-notifications/script.js', [], $version, TRUE );
-			wp_register_script( 'select2', $vendors_url_part . 'select2/js/select2.full.min.js', [ 'jquery' ], $version, TRUE );
-			wp_register_script( 'pickr', $vendors_url_part . 'pickr/pickr.min.js', [], $version, TRUE );
+			wp_register_script( 'awesome-notifications', $vendors_url_part . 'awesome-notifications/script.js', [], $version, true );
+			wp_register_script( 'select2', $vendors_url_part . 'select2/js/select2.full.min.js', [ 'jquery' ], $version, true );
+			wp_register_script( 'pickr', $vendors_url_part . 'pickr/pickr.min.js', [], $version, true );
 
 			wp_register_script( 'cbcurrencyconverter-public', $js_url_part . 'cbcurrencyconverter-public.js', [
 				'jquery',
 				'select2',
 				'awesome-notifications'
-			], $version, TRUE );
+			], $version, true );
 
 
 			$ajax_nonce = wp_create_nonce( 'cbcurrencyconverter_nonce' );
@@ -194,7 +194,7 @@ class CBCurrencyConverter_Admin {
 					'pickr',
 					'select2',
 					'jquery',
-				], $version, TRUE );
+				], $version, true );
 
 			// Localize the script with new data
 			$translation_array = [
@@ -209,12 +209,12 @@ class CBCurrencyConverter_Admin {
 				'copy_fail'         => esc_html__( 'Oops, unable to copy', 'cbcurrencyconverter' ),
 				'all_currencies'    => $all_currencies,
 				'teeny_setting'     => [
-					'teeny'         => TRUE,
-					'media_buttons' => TRUE,
+					'teeny'         => true,
+					'media_buttons' => true,
 					'editor_class'  => '',
 					'textarea_rows' => 5,
-					'quicktags'     => FALSE,
-					'menubar'       => FALSE,
+					'quicktags'     => false,
+					'menubar'       => false,
 				],
 				'pickr_i18n'        => [
 					// Strings visible in the UI
@@ -264,12 +264,12 @@ class CBCurrencyConverter_Admin {
 		}
 
 		if ( $hook == 'widgets.php' ) {
-			wp_register_script( 'select2', $vendors_url_part . 'select2/js/select2.full.min.js', [ 'jquery' ], $version, TRUE );
+			wp_register_script( 'select2', $vendors_url_part . 'select2/js/select2.full.min.js', [ 'jquery' ], $version, true );
 
 			wp_register_script( 'cbcurrencyconverter-widget', $js_url_part . 'cbcurrencyconverter-widget.js', [
 				'jquery',
 				'select2'
-			], $version, TRUE );
+			], $version, true );
 			$translation_array = [
 				'please_select'  => esc_html__( 'Please Select', 'cbcurrencyconverter' ),
 				'upload_btn'     => esc_html__( 'Upload', 'cbcurrencyconverter' ),
@@ -311,13 +311,13 @@ class CBCurrencyConverter_Admin {
 			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			echo cbcurrencyconverter_get_template_html( 'admin/support.php', [
 				'admin_ref' => $this,
-				'settings'  => $this->settings_api
+				'settings'  => $this->settings
 			] );
 		} else {
 			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			echo cbcurrencyconverter_get_template_html( 'admin/settings.php', [
 				'admin_ref' => $this,
-				'settings'  => $this->settings_api
+				'settings'  => $this->settings
 			] );
 		}
 	}//end admin_pages
@@ -328,11 +328,11 @@ class CBCurrencyConverter_Admin {
 	 */
 	public function setting_init() {
 		//set the settings
-		$this->settings_api->set_sections( $this->get_settings_sections() );
-		$this->settings_api->set_fields( $this->get_settings_fields() );
+		$this->settings->set_sections( $this->get_settings_sections() );
+		$this->settings->set_fields( $this->get_settings_fields() );
 
 		//initialize settings
-		$this->settings_api->admin_init();
+		$this->settings->admin_init();
 	}//end setting_init
 
 	/**
@@ -369,16 +369,16 @@ class CBCurrencyConverter_Admin {
 	 *
 	 * @access  public
 	 *
-	 * @param array $links_array An array of the plugin's metadata
-	 * @param string $plugin_file_name Path to the plugin file
-	 * @param array $plugin_data An array of plugin data
-	 * @param string $status Status of the plugin
+	 * @param  array  $links_array  An array of the plugin's metadata
+	 * @param  string  $plugin_file_name  Path to the plugin file
+	 * @param  array  $plugin_data  An array of plugin data
+	 * @param  string  $status  Status of the plugin
 	 *
 	 * @return  array       $links_array
 	 */
 	public function plugin_row_meta( $links_array, $plugin_file_name, $plugin_data, $status ) {
 
-		if ( strpos( $plugin_file_name, CBCURRENCYCONVERTER_BASE_NAME ) !== FALSE ) {
+		if ( strpos( $plugin_file_name, CBCURRENCYCONVERTER_BASE_NAME ) !== false ) {
 
 			if ( ! function_exists( 'is_plugin_active' ) ) {
 				include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
@@ -398,63 +398,14 @@ class CBCurrencyConverter_Admin {
 	}//end plugin_row_meta
 
 	/**
-	 * Post installation hook
-	 *
-	 * @param $response
-	 * @param array $hook_extra
-	 * @param array $result
-	 */
-	/*public function upgrader_post_install( $response, $hook_extra = [], $result = [] ) {
-		if ( $response && isset( $hook_extra['type'] ) && $hook_extra['type'] == 'plugin' ) {
-			if ( isset( $result['destination_name'] ) && $result['destination_name'] == 'cbcurrencyconverter' ) {
-				if ( ! function_exists( 'is_plugin_active' ) ) {
-					include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-				}
-
-				if ( in_array( 'cbcurrencyconverteraddon/cbcurrencyconverteraddon.php', apply_filters( 'active_plugins',
-						get_option( 'active_plugins' ) ) ) || defined( 'CBCURRENCYCONVERTERADDON_NAME' ) ) {
-					//plugin is activated
-
-					$pro_plugin_version = CBCURRENCYCONVERTERADDON_VERSION;
-
-
-					if ( version_compare( $pro_plugin_version, '1.6.9', '<' ) ) {
-						deactivate_plugins( 'cbcurrencyconverteraddon/cbcurrencyconverteraddon.php' );
-						set_transient( 'cbcurrencyconverteraddon_forcedactivated_notice', 1 );
-					}
-				}
-			}
-		}
-	}//end method upgrader_post_install*/
-
-	/**
-	 * If we need to do something in upgrader process is completed
-	 *
-	 * @param $upgrader_object
-	 * @param $options
-	 */
-	/*public function plugin_upgrader_process_complete( $upgrader_object, $options ) {
-		if ( isset( $options['plugins'] ) && $options['action'] == 'update' && $options['type'] == 'plugin' ) {
-			if ( sizeof( $options['plugins'] ) > 0 ) {
-				foreach ( $options['plugins'] as $each_plugin ) {
-					if ( $each_plugin == CBCURRENCYCONVERTER_BASE_NAME ) {
-						set_transient( 'cbcurrencyconverter_upgraded_notice', 1 );
-						break;
-					}
-				}
-			}
-		}
-	}//end plugin_upgrader_process_complete*/
-
-	/**
 	 * Plugin upgrade process on 'plugins_loaded'
 	 *
 	 * @return void
 	 */
 	public function plugins_loaded_upgrader_process() {
-		$saved_version = get_option('cbcurrencyconverter_version');
+		$saved_version = get_option( 'cbcurrencyconverter_version' );
 
-		if ($saved_version === false || version_compare($saved_version , CBCURRENCYCONVERTER_VERSION, '<')) {
+		if ( $saved_version === false || version_compare( $saved_version, CBCURRENCYCONVERTER_VERSION, '<' ) ) {
 
 			if ( ! function_exists( 'is_plugin_active' ) ) {
 				include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
@@ -476,7 +427,7 @@ class CBCurrencyConverter_Admin {
 			set_transient( 'cbcurrencyconverter_upgraded_notice', 1 );
 
 			// Update the saved version
-			update_option('cbcurrencyconverter_version', CBCURRENCYCONVERTER_VERSION);
+			update_option( 'cbcurrencyconverter_version', CBCURRENCYCONVERTER_VERSION );
 		}
 	}//end method plugins_loaded_upgrader_process
 
@@ -488,25 +439,28 @@ class CBCurrencyConverter_Admin {
 	 *
 	 * @return void
 	 */
-	public function custom_message_after_plugin_row_proaddon($plugin_file, $plugin_data){
+	public function custom_message_after_plugin_row_proaddon( $plugin_file, $plugin_data ) {
 		if ( $plugin_file !== 'cbcurrencyconverteraddon/cbcurrencyconverteraddon.php' ) {
 			return;
 		}
 
-		if(defined('CBCURRENCYCONVERTERADDON_NAME')) return;
+		if ( defined( 'CBCURRENCYCONVERTERADDON_NAME' ) ) {
+			return;
+		}
 
-		$pro_addon_version = CBCurrencyConverterHelper::get_any_plugin_version('cbcurrencyconverteraddon/cbcurrencyconverteraddon.php');
+		$pro_addon_version        = CBCurrencyConverterHelper::get_any_plugin_version( 'cbcurrencyconverteraddon/cbcurrencyconverteraddon.php' );
 		$pro_addon_version_latest = '1.7.7';
 
 
-		if($pro_addon_version != '' && version_compare( $pro_addon_version, '1.7.7', '<' ) ){
+		if ( $pro_addon_version != '' && version_compare( $pro_addon_version, '1.7.7', '<' ) ) {
 			// Custom message to display
 
 			//$plugin_setting_url = admin_url( 'admin.php?page=cbxwpbookmark_settings#cbxwpbookmark_licences' );
 			$plugin_manual_update = 'https://codeboxr.com/manual-update-pro-addon/';
 
 			/* translators:translators: %s: plugin setting url for licence */
-			$custom_message     = wp_kses(sprintf( __( '<strong>Note:</strong> CBX Currency Converter Pro Addon is custom plugin. This plugin can not be auto update from dashboard/plugin manager. For manual update please check <a target="_blank" href="%1$s">documentation</a>. <strong style="color: red;">It seems this plugin\'s current version is older than %2$s . To get the latest pro addon features, this plugin needs to upgrade to %2$s or later.</strong>', 'cbcurrencyconverter' ), esc_url( $plugin_manual_update ), $pro_addon_version_latest ), ['strong' => ['style' => []],'a' => ['href' => [], 'target' => []]]);
+			$custom_message = wp_kses( sprintf( __( '<strong>Note:</strong> CBX Currency Converter Pro Addon is custom plugin. This plugin can not be auto update from dashboard/plugin manager. For manual update please check <a target="_blank" href="%1$s">documentation</a>. <strong style="color: red;">It seems this plugin\'s current version is older than %2$s . To get the latest pro addon features, this plugin needs to upgrade to %2$s or later.</strong>', 'cbcurrencyconverter' ),
+				esc_url( $plugin_manual_update ), $pro_addon_version_latest ), [ 'strong' => [ 'style' => [] ], 'a' => [ 'href' => [], 'target' => [] ] ] );
 
 			// Output a row with custom content
 			echo '<tr class="plugin-update-tr">
@@ -527,12 +481,13 @@ class CBCurrencyConverter_Admin {
 		// Check the transient to see if cbxpollproaddon has been force deactivated
 		if ( get_transient( 'cbcurrencyconverteraddon_forcedactivated_notice' ) ) {
 			$notice_html = '<div style="border-left:4px solid #d63638;" class="notice notice-error is-dismissible">';
-			$notice_html .= '<p>' . __( '<strong>CBX Currency Converter Pro Addon</strong> has been deactivated as it\'s not compatible with core plugin <strong>CBX Currency Converter</strong> current installed version. Please upgrade CBX Currency Converter Pro Addon to latest version ',
-					'cbcurrencyconverter' ) . '</p>';
+			$notice_html .= '<p>' . wp_kses(__( '<strong>CBX Currency Converter Pro Addon</strong> has been deactivated as it\'s not compatible with core plugin <strong>CBX Currency Converter</strong> current installed version. Please upgrade CBX Currency Converter Pro Addon to latest version ',
+					'cbcurrencyconverter' ), ['strong' => []]) . '</p>';
 			$notice_html .= '</div>';
 
-			echo $notice_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			// Delete the transient, so we don't keep displaying the activation message
+			echo $notice_html; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+			// Delete the transient
 			delete_transient( 'cbcurrencyconverteraddon_forcedactivated_notice' );
 		}
 
@@ -542,8 +497,9 @@ class CBCurrencyConverter_Admin {
 			$notice_html .= '<p style="color: #fb4e24;">' . esc_html__( 'Currency rate cache has been reset', 'cbcurrencyconverter' ) . '</p>';
 			$notice_html .= '</div>';
 
-			echo $notice_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo $notice_html; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
+			//delete the transient
 			delete_transient( 'cbcurrencyconverter_transientreset_notice' );
 		}
 
@@ -555,6 +511,7 @@ class CBCurrencyConverter_Admin {
 
 			echo $notice_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
+			//delete the transient
 			delete_transient( 'cbcurrencyconverter_fullreset_notice' );
 		}
 
@@ -563,15 +520,15 @@ class CBCurrencyConverter_Admin {
 		if ( get_transient( 'cbcurrencyconverter_activated_notice' ) ) {
 			$notice_html = '<div style="border-left-color:#fb4e24;" class="notice notice-success is-dismissible">';
 			/* translators: %s : plugin core version */
-			$notice_html .= '<p><img style="float: left; display: inline-block; margin-right: 15px;" alt="icon" src="' . esc_url(plugins_url('assets/images/icon_48.png', dirname(__FILE__))) .  '" />' . sprintf( wp_kses(__( 'Thanks for installing/deactivating <strong>CBX Currency Converter</strong> V%s - Codeboxr Team', 'cbcurrencyconverter' ), ['strong' => []]), esc_attr(CBCURRENCYCONVERTER_VERSION) ) . '</p>'; //phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage
+			$notice_html .= '<p>' . sprintf( wp_kses( __( 'Thanks for installing/deactivating <strong>CBX Currency Converter</strong> V%s - Codeboxr Team', 'cbcurrencyconverter' ), [ 'strong' => [] ] ), esc_attr( CBCURRENCYCONVERTER_VERSION ) ) . '</p>'; //phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage
 			/* translators: 1. Plugin internal url  2. External plugin's author website link */
-			$notice_html .= '<p>' . sprintf( __( 'Check <a style="color: #fb4e24; font-weight: bold;" href="%1$s">Plugin Setting</a> | <a style="color: #fb4e24; font-weight: bold;" href="%2$s" target="_blank">Documentation</a>', 'cbcurrencyconverter' ), esc_url(admin_url( 'options-general.php?page=cbcurrencyconverter' )), 'https://codeboxr.com/product/cbx-currency-converter-for-wordpress/' ) . '</p>';
+			$notice_html .= '<p>' . sprintf( __( 'Check <a style="color: #fb4e24; font-weight: bold;" href="%1$s">Plugin Setting</a> | <a style="color: #fb4e24; font-weight: bold;" href="%2$s" target="_blank">Documentation</a>', 'cbcurrencyconverter' ), esc_url( admin_url( 'options-general.php?page=cbcurrencyconverter' ) ), 'https://codeboxr.com/product/cbx-currency-converter-for-wordpress/' ) . '</p>';
 			$notice_html .= '</div>';
 
 
 			echo $notice_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
-			// Delete the transient so we don't keep displaying the activation message
+			//Delete the transient
 			delete_transient( 'cbcurrencyconverter_activated_notice' );
 
 			$this->pro_addon_compatibility_campaign();
@@ -581,13 +538,15 @@ class CBCurrencyConverter_Admin {
 		if ( get_transient( 'cbcurrencyconverter_upgraded_notice' ) ) {
 			$notice_html = '<div style="border-left-color:#fb4e24;" class="notice notice-success is-dismissible">';
 			/* translators: %s: plugin core version */
-			$notice_html .= '<p><img style="float: left; display: inline-block; margin-right: 15px;" alt="icon" src="' . esc_url(plugins_url('assets/images/icon_48.png', dirname(__FILE__))) . '"/>' . sprintf( wp_kses(__( 'Thanks for upgrading <strong>CBX Currency Converter</strong> V%s , enjoy the new features and bug fixes - Codeboxr Team', 'cbcurrencyconverter' ), ['strong' => []]), esc_attr(CBCURRENCYCONVERTER_VERSION) ) . '</p>'; //phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage
+			$notice_html .= '<p>' . sprintf( wp_kses( __( 'Thanks for upgrading <strong>CBX Currency Converter</strong> V%s , enjoy the new features and bug fixes - Codeboxr Team', 'cbcurrencyconverter' ), [ 'strong' => [] ] ),
+					esc_attr( CBCURRENCYCONVERTER_VERSION ) ) . '</p>'; //phpcs:ignore PluginCheck.CodeAnalysis.ImageFunctions.NonEnqueuedImage
 			/* translators:1. Plugin internal url 2. Plugin author's website url for this plugin */
-			$notice_html .= '<p>' . sprintf( wp_kses(__( 'Check <a style="color: #fb4e24; font-weight: bold;"  href="%1$s" >Plugin Setting</a> | <a style="color: #fb4e24; font-weight: bold;" href="%2$s" target="_blank">Documentation</a>', 'cbcurrencyconverter' ), ['a' => ['href' => [], 'style' => [], 'target' => [], 'class' => []]]), esc_url(admin_url( 'options-general.php?page=cbcurrencyconverter' )), 'https://codeboxr.com/product/cbx-currency-converter-for-wordpress/' ) . '</p>';
+			$notice_html .= '<p>' . sprintf( wp_kses( __( 'Check <a style="color: #fb4e24; font-weight: bold;"  href="%1$s" >Plugin Setting</a> | <a style="color: #fb4e24; font-weight: bold;" href="%2$s" target="_blank">Documentation</a>', 'cbcurrencyconverter' ), [ 'a' => [ 'href' => [], 'style' => [], 'target' => [], 'class' => [] ] ] ), esc_url( admin_url( 'options-general.php?page=cbcurrencyconverter' ) ), 'https://codeboxr.com/product/cbx-currency-converter-for-wordpress/' ) . '</p>';
 			$notice_html .= '</div>';
 
 			echo $notice_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			// Delete the transient so we don't keep displaying the activation message
+
+			//Delete the transient
 			delete_transient( 'cbcurrencyconverter_upgraded_notice' );
 
 			$this->pro_addon_compatibility_campaign();
@@ -609,7 +568,7 @@ class CBCurrencyConverter_Admin {
 			$plugin_version = CBCURRENCYCONVERTERADDON_VERSION;
 		} else {
 			/* translators: %s: plugin pro addon external url */
-			echo '<div style="border-left-color:#fb4e24;" class="notice notice-success is-dismissible"><p>' . sprintf( wp_kses(__( '<a target="_blank" href="%s">CBX Currency Converter Pro Addon</a> has extended features, settings, widgets and shortcodes. try it  - Codeboxr Team', 'cbcurrencyconverter' ), ['a' => ['href' => [], 'target' => [], 'style' => []]]), 'https://codeboxr.com/product/cbx-currency-converter-for-wordpress/' ) . '</p></div>';
+			echo '<div style="border-left-color:#fb4e24;" class="notice notice-success is-dismissible"><p>' . sprintf( wp_kses( __( '<a target="_blank" href="%s">CBX Currency Converter Pro Addon</a> has extended features, settings, widgets and shortcodes. try it  - Codeboxr Team', 'cbcurrencyconverter' ), [ 'a' => [ 'href' => [], 'target' => [], 'style' => [] ] ] ), 'https://codeboxr.com/product/cbx-currency-converter-for-wordpress/' ) . '</p></div>';
 		}
 	}//end pro_addon_compatibility_campaign
 
@@ -618,7 +577,8 @@ class CBCurrencyConverter_Admin {
 	 */
 	public function plugin_update_message_pro_addons() {
 		/* translators: 1. Plugin setting url 2. Documentation link */
-		echo ' ' . sprintf( wp_kses(__( 'Check how to <a style="color:#9c27b0 !important; font-weight: bold;" href="%1$s"><strong>Update manually</strong></a> , download latest version from <a style="color:#9c27b0 !important; font-weight: bold;" href="%2$s"><strong>My Account</strong></a> section of Codeboxr.com', 'cbcurrencyconverter' ), ['a' => ['href' => [], 'style' => [], 'target' => [], 'class' =>[]], 'strong' => []]), 'https://codeboxr.com/manual-update-pro-addon/', 'https://codeboxr.com/my-account/' );
+		echo ' ' . sprintf( wp_kses( __( 'Check how to <a style="color:#9c27b0 !important; font-weight: bold;" href="%1$s"><strong>Update manually</strong></a> , download latest version from <a style="color:#9c27b0 !important; font-weight: bold;" href="%2$s"><strong>My Account</strong></a> section of Codeboxr.com', 'cbcurrencyconverter' ), [ 'a' => [ 'href' => [], 'style' => [], 'target' => [], 'class' => [] ], 'strong' => [] ] ), 'https://codeboxr.com/manual-update-pro-addon/',
+				'https://codeboxr.com/my-account/' );
 	}//end plugin_update_message_pro_addons
 
 	/**
@@ -723,16 +683,16 @@ class CBCurrencyConverter_Admin {
 		//delete plugin transient caches
 		$transient_caches = CBCurrencyConverterHelper::getAllTransientCacheNames();
 
-		do_action('cbcurrencyconverter_plugin_transient_caches_deleted_before');
+		do_action( 'cbcurrencyconverter_plugin_transient_caches_deleted_before' );
 
 		foreach ( $transient_caches as $transient_cache ) {
-			do_action('cbcurrencyconverter_plugin_transient_cache_delete_before', $transient_cache);
+			do_action( 'cbcurrencyconverter_plugin_transient_cache_delete_before', $transient_cache );
 			delete_transient( $transient_cache );
-			do_action('cbcurrencyconverter_plugin_transient_cache_delete_after', $transient_cache);
+			do_action( 'cbcurrencyconverter_plugin_transient_cache_delete_after', $transient_cache );
 		}
 
-		do_action('cbcurrencyconverter_plugin_transient_caches_deleted_after');
-		do_action('cbcurrencyconverter_plugin_transient_caches_deleted');
+		do_action( 'cbcurrencyconverter_plugin_transient_caches_deleted_after' );
+		do_action( 'cbcurrencyconverter_plugin_transient_caches_deleted' );
 		//end delete plugin transient caches
 
 		set_transient( 'cbcurrencyconverter_transientreset_notice', 1 );
@@ -741,4 +701,4 @@ class CBCurrencyConverter_Admin {
 
 		wp_send_json( $msg );
 	}//end transient_reset
-}//end class CBCurrencyConverter_Admin
+}//end class CBCurrencyConverterAdmin

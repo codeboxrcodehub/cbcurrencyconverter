@@ -4,30 +4,33 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+if(!function_exists('cbcurrencyconverter_deprecated_function')){
+	/**
+	 * Wrapper for deprecated functions so we can apply some extra logic.
+	 *
+	 * @param  string  $function
+	 * @param  string  $version
+	 * @param  string  $replacement
+	 *
+	 * @since  2.2.0
+	 *
+	 */
+	function cbcurrencyconverter_deprecated_function( $function, $version, $replacement = null ) {
+		if ( defined( 'DOING_AJAX' ) ) {
+			do_action( 'deprecated_function_run', $function, $replacement, $version );
+			$log_string = "The {$function} function is deprecated since version {$version}."; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			$log_string .= $replacement ? " Replace with {$replacement}." : ''; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
-/**
- * Wrapper for deprecated functions so we can apply some extra logic.
- *
- * @param  string  $function
- * @param  string  $version
- * @param  string  $replacement
- *
- * @since  2.2.0
- *
- */
-function cbcurrencyconverter_deprecated_function( $function, $version, $replacement = null ) {
-	if ( defined( 'DOING_AJAX' ) ) {
-		do_action( 'deprecated_function_run', $function, $replacement, $version );
-		$log_string = "The {$function} function is deprecated since version {$version}."; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		$log_string .= $replacement ? " Replace with {$replacement}." : ''; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-
-		if(defined('WP_DEBUG') && WP_DEBUG && defined('WP_DEBUG_LOG') && WP_DEBUG_LOG){
-			error_log( $log_string );//phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+			if(defined('WP_DEBUG') && WP_DEBUG && defined('WP_DEBUG_LOG') && WP_DEBUG_LOG){
+				error_log( $log_string );//phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+			}
+		} else {
+			_deprecated_function( $function, $version, $replacement ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
-	} else {
-		_deprecated_function( $function, $version, $replacement ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	}
-}//end function cbcurrencyconverter_deprecated_function
+	}//end function cbcurrencyconverter_deprecated_function	
+}
+
+
 
 if ( ! function_exists( 'cbcurrencyconverter_get_rate' ) ) {
 	/**
@@ -223,7 +226,54 @@ if ( ! function_exists( 'cbcurrencyconverter_load_svg' ) ) {
 
 
 if(!function_exists('cbcurrencyconverter_sanitize_wp_kses')){
-	function  cbcurrencyconverter_sanitize_wp_kses() {
-		return CBCurrencyConverterHelper::sanitize_wp_kses();
+	function  cbcurrencyconverter_sanitize_wp_kses($html = '') {
+		return CBCurrencyConverterHelper::sanitize_wp_kses($html);
 	}//end function cbcurrencyconverter_sanitize_wp_kses
+}
+
+if(!function_exists('cbcurrencyconverter_is_rest_api_request')){
+	/**
+	 * Check if doing rest request
+	 *
+	 * @return bool
+	 */
+	function cbcurrencyconverter_is_rest_api_request() {
+		if ( defined( 'REST_REQUEST' ) && REST_REQUEST ) {
+			return true;
+		}
+
+		$REQUEST_URI = isset($_SERVER['REQUEST_URI'])? sanitize_text_field(wp_unslash($_SERVER['REQUEST_URI'])) : '';
+
+		if ( empty( $REQUEST_URI ) ) {
+			return false;
+		}
+
+		$rest_prefix = trailingslashit( rest_get_url_prefix() );
+
+
+		return ( false !== strpos( $REQUEST_URI, $rest_prefix ) );
+	}//end function cbcurrencyconverter_is_rest_api_request
+}
+
+if(!function_exists('cbcurrencyconverter_doing_it_wrong')){
+	/**
+	 * Wrapper for _doing_it_wrong().
+	 *
+	 * @since  1.0.0
+	 * @param string $function Function used.
+	 * @param string $message Message to log.
+	 * @param string $version Version the message was added in.
+	 */
+	function cbcurrencyconverter_doing_it_wrong( $function, $message, $version ) {
+		// @codingStandardsIgnoreStart
+		$message .= ' Backtrace: ' . wp_debug_backtrace_summary();
+
+		if ( wp_doing_ajax() || cbcurrencyconverter_is_rest_api_request() ) {
+			do_action( 'doing_it_wrong_run', $function, $message, $version );
+			error_log( "{$function} was called incorrectly. {$message}. This message was added in version {$version}." );
+		} else {
+			_doing_it_wrong( $function, $message, $version );
+		}
+		// @codingStandardsIgnoreEnd
+	}//end function cbcurrencyconverter_doing_it_wrong
 }

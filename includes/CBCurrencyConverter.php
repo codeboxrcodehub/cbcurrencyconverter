@@ -99,6 +99,24 @@ class CBCurrencyConverter {
 	}//end method instance
 
 	/**
+	 * Cloning is forbidden.
+	 *
+	 * @since 3.1.7
+	 */
+	public function __clone() {
+		cbcurrencyconverter_doing_it_wrong( __FUNCTION__, esc_html__( 'Cloning is forbidden.', 'cbcurrencyconverter' ), '3.1.7' );
+	}//end method clone
+
+	/**
+	 * Unserializing instances of this class is forbidden.
+	 *
+	 * @since 3.1.7
+	 */
+	public function __wakeup() {
+		cbcurrencyconverter_doing_it_wrong( __FUNCTION__, esc_html__( 'Unserializing instances of this class is forbidden.', 'cbcurrencyconverter' ), '3.1.7' );
+	}//end method wakeup
+
+	/**
 	 * Get currency list
 	 *
 	 * @return mixed|void
@@ -116,8 +134,8 @@ class CBCurrencyConverter {
 	 *
 	 * - CBCurrencyConverter_Loader. Orchestrates the hooks of the plugin.
 	 * - CBCurrencyConverter_i18n. Defines internationalization functionality.
-	 * - CBCurrencyConverter_Admin. Defines all hooks for the admin area.
-	 * - CBCurrencyConverter_Public. Defines all hooks for the public side of the site.
+	 * - CBCurrencyConverterAdmin. Defines all hooks for the admin area.
+	 * - CBCurrencyConverterPublic. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -126,9 +144,9 @@ class CBCurrencyConverter {
 	 * @access   private
 	 */
 	private function load_dependencies() {
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/cbcurrencyconverter-tpl-loader.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-cbcurrencyconverter-setting.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-cbcurrencyconverter-helper.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/Functions/cbcurrencyconverter-tpl-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/CBCurrencyconverterSetting.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/Helpers/CBCurrencyConverterHelper.php';
 
 
 		//exchange api class
@@ -139,13 +157,13 @@ class CBCurrencyConverter {
 
 
 		//public and admin classes
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-cbcurrencyconverter-admin.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-cbcurrencyconverter-public.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/cbcurrencyconverter-functions.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/CBCurrencyConverterAdmin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/CBCurrencyConverterPublic.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/Functions/cbcurrencyconverter-functions.php';
 
 		//widget classes
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'widgets/gutenberg/class-cbcurrencyconverter-gutenbergwidget.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'widgets/classic_widgets/class-cbcurrencyconverter-widget.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/Widgets/Blocks/CBCurrencyConverterGutenbergWidget.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/Widgets/Classic/CBCurrencyConverterWidget.php';
 	}//end method load_dependencies
 
 
@@ -155,7 +173,7 @@ class CBCurrencyConverter {
 	 * @return void
 	 */
 	private function define_common_hooks() {
-		add_action( 'plugins_loaded', [ $this, 'load_plugin_textdomain' ] );
+		add_action( 'init', [ $this, 'load_plugin_textdomain' ] );
 	}//end method define_common_hooks
 
 	/**
@@ -168,7 +186,7 @@ class CBCurrencyConverter {
 	private function define_admin_hooks() {
 		global $wp_version;
 
-		$plugin_admin     = new CBCurrencyConverter_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin     = new CBCurrencyConverterAdmin( $this->get_plugin_name(), $this->get_version() );
 		$gutenberg_widget = new CBCurrencyConverterGutenbergWidget( $this->get_plugin_name(), $this->get_version() );
 
 
@@ -212,7 +230,7 @@ class CBCurrencyConverter {
 	private function define_public_hooks() {
 		global $plugin_public;
 
-		$plugin_public = new CBCurrencyConverter_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new CBCurrencyConverterPublic( $this->get_plugin_name(), $this->get_version() );
 
 		add_action( 'wp_enqueue_scripts', [ $plugin_public, 'enqueue_styles' ] );
 		add_action( 'wp_enqueue_scripts', [ $plugin_public, 'enqueue_scripts' ] );

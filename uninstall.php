@@ -33,11 +33,11 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
  * The code that runs during plugin uninstall.
  */
 function uninstall_cbcurrencyconverter() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-cbcurrencyconverter-setting.php';
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-cbcurrencyconverter-helper.php';
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-cbcurrencyconverter-uninstall.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/CBCurrencyconverterSetting.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/Helpers/CBCurrencyConverterHelper.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/CBCurrencyConverterUninstall.php';
 
-	CBCurrencyConverter_Uninstall::uninstall();
+	CBCurrencyConverterUninstall::uninstall();
 }//end function uninstall_cbcurrencyconverter
 
 if ( ! defined( 'CBCURRENCYCONVERTER_NAME' ) ) {

@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Currency converted wpbakery widget class
  *
  */
-class CBCurrencyConverter_WPBWidget extends WPBakeryShortCode {
+class CBCurrencyConverterWPBWidget extends WPBakeryShortCode {
 	/**
 	 * Constructor.
 	 */
