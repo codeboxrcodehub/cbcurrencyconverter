@@ -448,13 +448,9 @@ class CBCurrencyConverterAdmin {
 			return;
 		}
 
-		//$pro_addon_version        = CBCurrencyConverterHelper::get_any_plugin_version( 'cbcurrencyconverteraddon/cbcurrencyconverteraddon.php' );
-		//$pro_addon_version_latest = '1.7.9';
 
-
-		//$pro_addon_version = CBXRBookingHelpers::get_any_plugin_version('cbxrbookingpro/cbxrbookingpro.php');
 		$pro_addon_version = isset( $plugin_data['Version'] ) ? $plugin_data['Version'] : '';
-		$required_version = '1.7.9';
+		$required_version = '1.7.10';
 
 		if ( $pro_addon_version != '' && version_compare( $pro_addon_version, $required_version, '<' ) ) {
 			// Custom message to display

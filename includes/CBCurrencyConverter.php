@@ -32,7 +32,7 @@ if ( ! defined( 'WPINC' ) ) {
  * @subpackage CBCurrencyConverter/includes
  * @author     codeboxr <info@codeboxr.com>
  */
-class CBCurrencyConverter {
+final class CBCurrencyConverter {
 	/**
 	 * The single instance of the class.
 	 *

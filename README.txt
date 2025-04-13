@@ -3,7 +3,7 @@ Contributors: codeboxr, manchumahara
 Tags: currency converter,currency conversion,currency exchange,currency calculator,bitcoin
 Requires at least: 5.3
 Tested up to: 6.8
-Stable tag: 3.1.10
+Stable tag: 3.1.11
 PHP:7.4.*
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -95,6 +95,10 @@ How to install the plugin and get it working.
 == Screenshots ==
 
 == Changelog ==
+= 3.1.11 =
+* [updated] Improved Core
+* [updated] Pro Addon V1.7.10
+
 = 3.1.10 =
 * [fixed] Visual Composer Widget fixed from previous two releases
 

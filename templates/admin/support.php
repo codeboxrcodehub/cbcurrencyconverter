@@ -111,6 +111,15 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                     <div class="content">
                         <div class="cbx-backend-settings-row">
                             <p>
+                                Version - 3.1.11
+                            </p>
+                            <ul>
+                                <li>[updated] Improved Core</li>
+                                <li>[updated] Pro Addon V1.7.10</li>
+                            </ul>
+                        </div>
+                        <div class="cbx-backend-settings-row">
+                            <p>
                                 Version - 3.1.10
                             </p>
                             <ul>
@@ -125,15 +134,6 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                                 <li>[fixed] Elementor widget bug fix from previous release V3.1.8</li>
                             </ul>
                         </div>
-                        <div class="cbx-backend-settings-row">
-                            <p>
-                                Version - 3.1.8
-                            </p>
-                            <ul>
-                                <li>[updated] WordPress Core 6.8 compatible</li>
-                                <li>[updated] Minor improvements and code structure refactor</li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
                 <div class="cbx-backend-card dashboard-changelog">
@@ -143,6 +143,15 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                         </div>
                     </div>
                     <div class="content">
+                        <div class="cbx-backend-settings-row">
+                            <p>
+                                Version - 1.7.10
+                            </p>
+                            <ul>
+                                <li>[updated] WordPress Core 6.8 compatible</li>
+                                <li>[updated] Minor improvement</li>
+                            </ul>
+                        </div>
                         <div class="cbx-backend-settings-row">
                             <p>
                                 Version - 1.7.9
@@ -161,16 +170,6 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                                 <li>[updated] WordPress Core 6.7.1 compatible</li>
                                 <li>[updated] Core plugin V3.1.5 compatible</li>
                                 <li>[updated] Plugin check V1.3.1 compatible</li>
-                            </ul>
-                        </div>
-                        <div class="cbx-backend-settings-row">
-                            <p>
-                                Version - 1.7.6
-                            </p>
-                            <ul>
-                                <li>[improvement] Style improvement</li>
-                                <li>[updated] WordPress Core 6.6.1 compatible</li>
-                                <li>[updated] Core plugin V3.1.4 released</li>
                             </ul>
                         </div>
                     </div>
