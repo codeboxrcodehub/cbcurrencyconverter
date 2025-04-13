@@ -95,10 +95,10 @@ class CBCurrencyConverterPublic {
 		$js_path_part      = CBCURRENCYCONVERTER_ROOT_PATH . 'assets/js/';
 		$vendors_path_part = CBCURRENCYCONVERTER_ROOT_PATH . 'assets/vendors/';
 
-		$version = $this->version;
+		$ver = $this->version;
 
-		wp_register_style( 'select2', $vendors_url_part . 'select2/css/select2.min.css', [], $version );
-		wp_register_style( 'cbcurrencyconverter-public', $css_url_part . 'cbcurrencyconverter-public.css', [ 'select2' ], $version, 'all' );
+		wp_register_style( 'select2', $vendors_url_part . 'select2/css/select2.min.css', [], $ver );
+		wp_register_style( 'cbcurrencyconverter-public', $css_url_part . 'cbcurrencyconverter-public.css', [ 'select2' ], $ver, 'all' );
 
 		wp_enqueue_style( 'select2' );
 		wp_enqueue_style( 'cbcurrencyconverter-public' );
@@ -118,11 +118,11 @@ class CBCurrencyConverterPublic {
 		$js_path_part      = CBCURRENCYCONVERTER_ROOT_PATH . 'assets/js/';
 		$vendors_path_part = CBCURRENCYCONVERTER_ROOT_PATH . 'assets/vendors/';
 
-		$version    = $this->version;
+		$ver    = $this->version;
 		$ajax_nonce = wp_create_nonce( "cbcurrencyconverter_nonce" );
 
-		wp_register_script( 'select2', $vendors_url_part . 'select2/js/select2.full.min.js', [ 'jquery' ], $version, true );
-		wp_register_script( 'cbcurrencyconverter-public', $js_url_part . 'cbcurrencyconverter-public.js', [ 'jquery', 'select2' ], $version, true );
+		wp_register_script( 'select2', $vendors_url_part . 'select2/js/select2.full.min.js', [ 'jquery' ], $ver, true );
+		wp_register_script( 'cbcurrencyconverter-public', $js_url_part . 'cbcurrencyconverter-public.js', [ 'jquery', 'select2' ], $ver, true );
 
 		wp_localize_script( 'cbcurrencyconverter-public',
 			'cbcurrencyconverter_public',
@@ -327,7 +327,7 @@ class CBCurrencyConverterPublic {
 	 * Load Elementor Custom Icon
 	 */
 	function elementor_icon_loader() {
-		$version = $this->version;
+		$ver = $this->version;
 
 		$css_url_part     = CBCURRENCYCONVERTER_ROOT_URL . 'assets/css/';
 		$js_url_part      = CBCURRENCYCONVERTER_ROOT_URL . 'assets/js/';
@@ -337,7 +337,7 @@ class CBCurrencyConverterPublic {
 		$js_path_part      = CBCURRENCYCONVERTER_ROOT_PATH . 'assets/js/';
 		$vendors_path_part = CBCURRENCYCONVERTER_ROOT_PATH . 'assets/vendors/';
 
-		wp_register_style( 'cbcurrencyconverter-elementor', $css_url_part . 'cbcurrencyconverter-elementor.css', false, $version );
+		wp_register_style( 'cbcurrencyconverter-elementor', $css_url_part . 'cbcurrencyconverter-elementor.css', false, $ver );
 		wp_enqueue_style( 'cbcurrencyconverter-elementor' );
 	}//end elementor_icon_loader
 
@@ -404,6 +404,6 @@ class CBCurrencyConverterPublic {
 			require_once CBCURRENCYCONVERTER_ROOT_PATH . 'includes/Widgets/VisualComposer/CBCurrencyConverterWPBWidget.php';
 		}
 
-		new CBCurrencyConverter_WPBWidget();
+		new CBCurrencyConverterWPBWidget();
 	}//end method vc_before_init_actions
 }//end class CBCurrencyConverterPublic

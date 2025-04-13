@@ -8,7 +8,7 @@
  * Plugin Name:       CBX Currency Converter
  * Plugin URI:        https://codeboxr.com/product/cbx-currency-converter-for-wordpress/
  * Description:       Currency Converter and rate display
- * Version:           3.1.9
+ * Version:           3.1.10
  * Author:            codeboxr
  * Author URI:        https://codeboxr.com
  * License:           GPL-2.0+
@@ -24,7 +24,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 defined( 'CBCURRENCYCONVERTER_NAME' ) or define( 'CBCURRENCYCONVERTER_NAME', 'cbcurrencyconverter' );
-defined( 'CBCURRENCYCONVERTER_VERSION' ) or define( 'CBCURRENCYCONVERTER_VERSION', '3.1.9' );
+defined( 'CBCURRENCYCONVERTER_VERSION' ) or define( 'CBCURRENCYCONVERTER_VERSION', '3.1.10' );
 defined( 'CBCURRENCYCONVERTER_ROOT_PATH' ) or define( 'CBCURRENCYCONVERTER_ROOT_PATH', plugin_dir_path( __FILE__ ) );
 defined( 'CBCURRENCYCONVERTER_ROOT_URL' ) or define( 'CBCURRENCYCONVERTER_ROOT_URL', plugin_dir_url( __FILE__ ) );
 defined( 'CBCURRENCYCONVERTER_BASE_NAME' ) or define( 'CBCURRENCYCONVERTER_BASE_NAME', plugin_basename( __FILE__ ) );

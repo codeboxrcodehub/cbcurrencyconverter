@@ -148,4 +148,4 @@ class CBCurrencyConverterWPBWidget extends WPBakeryShortCode {
 			)
 		] );
 	}//end bakery_shortcode_mapping
-}//end class CBCurrencyConverter_WPBWidget
+}//end class CBCurrencyConverterWPBWidget

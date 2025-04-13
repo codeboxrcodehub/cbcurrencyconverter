@@ -111,6 +111,14 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                     <div class="content">
                         <div class="cbx-backend-settings-row">
                             <p>
+                                Version - 3.1.10
+                            </p>
+                            <ul>
+                                <li>[fixed] Visual Composer Widget fixed from previous two releases</li>
+                            </ul>
+                        </div>
+                        <div class="cbx-backend-settings-row">
+                            <p>
                                 Version - 3.1.9
                             </p>
                             <ul>
@@ -124,14 +132,6 @@ $doc_url    = CBCurrencyConverterHelper::url_utmy( 'https://codeboxr.com/doc/cbc
                             <ul>
                                 <li>[updated] WordPress Core 6.8 compatible</li>
                                 <li>[updated] Minor improvements and code structure refactor</li>
-                            </ul>
-                        </div>
-                        <div class="cbx-backend-settings-row">
-                            <p>
-                                Version - 3.1.7
-                            </p>
-                            <ul>
-                                <li>[fixed] Fixed miss spelled function name</li>
                             </ul>
                         </div>
                     </div>

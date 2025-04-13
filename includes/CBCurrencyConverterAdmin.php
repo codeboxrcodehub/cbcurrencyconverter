@@ -81,7 +81,7 @@ class CBCurrencyConverterAdmin {
 	 * @since    1.0.0
 	 */
 	public function enqueue_styles( $hook ) {
-		$version = $this->version;
+		$ver = $this->version;
 		$page    = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
 		$css_url_part     = CBCURRENCYCONVERTER_ROOT_URL . 'assets/css/';
@@ -95,15 +95,15 @@ class CBCurrencyConverterAdmin {
 
 		if ( $page == 'cbcurrencyconverter' ) {
 
-			wp_register_style( 'awesome-notifications', $vendors_url_part . 'awesome-notifications/style.css', [], $version );
-			wp_register_style( 'select2', $vendors_url_part . 'select2/css/select2.min.css', [], $version );
-			wp_register_style( 'pickr', $vendors_url_part . 'pickr/themes/classic.min.css', [], $version );
+			wp_register_style( 'awesome-notifications', $vendors_url_part . 'awesome-notifications/style.css', [], $ver );
+			wp_register_style( 'select2', $vendors_url_part . 'select2/css/select2.min.css', [], $ver );
+			wp_register_style( 'pickr', $vendors_url_part . 'pickr/themes/classic.min.css', [], $ver );
 
 
 			wp_enqueue_style( 'pickr' );
 
-			wp_register_style( 'cbcurrencyconverter-public', $css_url_part . 'cbcurrencyconverter-public.css', [ 'select2' ], $version, 'all' );
-			wp_register_style( 'cbcurrencyconverter-admin', $css_url_part . 'cbcurrencyconverter-admin.css', [], $version );
+			wp_register_style( 'cbcurrencyconverter-public', $css_url_part . 'cbcurrencyconverter-public.css', [ 'select2' ], $ver, 'all' );
+			wp_register_style( 'cbcurrencyconverter-admin', $css_url_part . 'cbcurrencyconverter-admin.css', [], $ver );
 
 			wp_register_style( 'cbcurrencyconverter-setting', $css_url_part . 'cbcurrencyconverter-setting.css', [
 				'pickr',
@@ -111,7 +111,7 @@ class CBCurrencyConverterAdmin {
 				'awesome-notifications',
 				'cbcurrencyconverter-public',
 				'cbcurrencyconverter-admin'
-			], $version );
+			], $ver );
 
 
 			wp_enqueue_style( 'select2' );
@@ -125,11 +125,11 @@ class CBCurrencyConverterAdmin {
 
 		//widgets pages
 		if ( $hook == 'widgets.php' ) {
-			wp_register_style( 'select2', $vendors_url_part . 'select2/css/select2.min.css', [], $version );
+			wp_register_style( 'select2', $vendors_url_part . 'select2/css/select2.min.css', [], $ver );
 
 			wp_register_style( 'cbcurrencyconverter-widget', $css_url_part . 'cbcurrencyconverter-widget.css', [
 				'select2'
-			], $version );
+			], $ver );
 
 			wp_enqueue_style( 'select2' );
 			wp_enqueue_style( 'cbcurrencyconverter-widget' );
@@ -142,7 +142,7 @@ class CBCurrencyConverterAdmin {
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts( $hook ) {
-		$version = $this->version;
+		$ver = $this->version;
 		$page    = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
 
@@ -159,15 +159,15 @@ class CBCurrencyConverterAdmin {
 
 		//main setting page
 		if ( $page == 'cbcurrencyconverter' ) {
-			wp_register_script( 'awesome-notifications', $vendors_url_part . 'awesome-notifications/script.js', [], $version, true );
-			wp_register_script( 'select2', $vendors_url_part . 'select2/js/select2.full.min.js', [ 'jquery' ], $version, true );
-			wp_register_script( 'pickr', $vendors_url_part . 'pickr/pickr.min.js', [], $version, true );
+			wp_register_script( 'awesome-notifications', $vendors_url_part . 'awesome-notifications/script.js', [], $ver, true );
+			wp_register_script( 'select2', $vendors_url_part . 'select2/js/select2.full.min.js', [ 'jquery' ], $ver, true );
+			wp_register_script( 'pickr', $vendors_url_part . 'pickr/pickr.min.js', [], $ver, true );
 
 			wp_register_script( 'cbcurrencyconverter-public', $js_url_part . 'cbcurrencyconverter-public.js', [
 				'jquery',
 				'select2',
 				'awesome-notifications'
-			], $version, true );
+			], $ver, true );
 
 
 			$ajax_nonce = wp_create_nonce( 'cbcurrencyconverter_nonce' );
@@ -194,7 +194,7 @@ class CBCurrencyConverterAdmin {
 					'pickr',
 					'select2',
 					'jquery',
-				], $version, true );
+				], $ver, true );
 
 			// Localize the script with new data
 			$translation_array = [
@@ -264,12 +264,12 @@ class CBCurrencyConverterAdmin {
 		}
 
 		if ( $hook == 'widgets.php' ) {
-			wp_register_script( 'select2', $vendors_url_part . 'select2/js/select2.full.min.js', [ 'jquery' ], $version, true );
+			wp_register_script( 'select2', $vendors_url_part . 'select2/js/select2.full.min.js', [ 'jquery' ], $ver, true );
 
 			wp_register_script( 'cbcurrencyconverter-widget', $js_url_part . 'cbcurrencyconverter-widget.js', [
 				'jquery',
 				'select2'
-			], $version, true );
+			], $ver, true );
 			$translation_array = [
 				'please_select'  => esc_html__( 'Please Select', 'cbcurrencyconverter' ),
 				'upload_btn'     => esc_html__( 'Upload', 'cbcurrencyconverter' ),
@@ -391,7 +391,7 @@ class CBCurrencyConverterAdmin {
 				$links_array['pro'] = '<a style="color: #fb4e24; font-weight: bold;" href="https://codeboxr.com/product/cbx-currency-converter-for-wordpress/" target="_blank">' . esc_html__( 'Try Pro Addon', 'cbcurrencyconverter' ) . '</a>';
 			}
 
-			$links_array['documentation'] = '<a style="color: #fb4e24; font-weight: bold;" href="https://codeboxr.com/docs/documentation-for-cbx-currency-converter-for-wordpress/" target="_blank">' . esc_html__( 'Documentation', 'cbcurrencyconverter' ) . '</a>';
+			$links_array['documentation'] = '<a style="color: #fb4e24; font-weight: bold;" href="https://codeboxr.com/doc/cbcurrencyconverter-doc/" target="_blank">' . esc_html__( 'Documentation', 'cbcurrencyconverter' ) . '</a>';
 		}
 
 		return $links_array;
@@ -448,11 +448,15 @@ class CBCurrencyConverterAdmin {
 			return;
 		}
 
-		$pro_addon_version        = CBCurrencyConverterHelper::get_any_plugin_version( 'cbcurrencyconverteraddon/cbcurrencyconverteraddon.php' );
-		$pro_addon_version_latest = '1.7.7';
+		//$pro_addon_version        = CBCurrencyConverterHelper::get_any_plugin_version( 'cbcurrencyconverteraddon/cbcurrencyconverteraddon.php' );
+		//$pro_addon_version_latest = '1.7.9';
 
 
-		if ( $pro_addon_version != '' && version_compare( $pro_addon_version, '1.7.7', '<' ) ) {
+		//$pro_addon_version = CBXRBookingHelpers::get_any_plugin_version('cbxrbookingpro/cbxrbookingpro.php');
+		$pro_addon_version = isset( $plugin_data['Version'] ) ? $plugin_data['Version'] : '';
+		$required_version = '1.7.9';
+
+		if ( $pro_addon_version != '' && version_compare( $pro_addon_version, $required_version, '<' ) ) {
 			// Custom message to display
 
 			//$plugin_setting_url = admin_url( 'admin.php?page=cbxwpbookmark_settings#cbxwpbookmark_licences' );
@@ -460,7 +464,7 @@ class CBCurrencyConverterAdmin {
 
 			/* translators:translators: %s: plugin setting url for licence */
 			$custom_message = wp_kses( sprintf( __( '<strong>Note:</strong> CBX Currency Converter Pro Addon is custom plugin. This plugin can not be auto update from dashboard/plugin manager. For manual update please check <a target="_blank" href="%1$s">documentation</a>. <strong style="color: red;">It seems this plugin\'s current version is older than %2$s . To get the latest pro addon features, this plugin needs to upgrade to %2$s or later.</strong>', 'cbcurrencyconverter' ),
-				esc_url( $plugin_manual_update ), $pro_addon_version_latest ), [ 'strong' => [ 'style' => [] ], 'a' => [ 'href' => [], 'target' => [] ] ] );
+				esc_url( $plugin_manual_update ), $required_version ), [ 'strong' => [ 'style' => [] ], 'a' => [ 'href' => [], 'target' => [] ] ] );
 
 			// Output a row with custom content
 			echo '<tr class="plugin-update-tr">
